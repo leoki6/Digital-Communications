@@ -5,7 +5,7 @@
 - [System Schematic](#system-schematic)
 - [Hardware Requirements](#technology-description)
 - [Software Requirements](#technology-description)
-- [System](#system-analysis)
+- [System Analysis](#system-analysis)
 
 ## Laboratory Objective
 todo
