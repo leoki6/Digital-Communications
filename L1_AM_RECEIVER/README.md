@@ -23,16 +23,16 @@ The purpose of this laboratory assignment was to introduce and build a simple am
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Schematic/am_receiver_schematic.png) 
 
 ## System Analysis
-### Preliminary Variables, Options, and Ranges
+#### Preliminary Variables, Options, and Ranges
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/variables_ranges_options.png) 
 
-### Signal Source Generation and Filtering
+#### Signal Source Generation and Filtering
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/source_filter_freq.png) 
 
-### Demodulation and Throttling
+#### Demodulation and Throttling
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/demod_throttle.png) 
 
-### Resampling, Waterfall Sink, and Audio Sink
+#### Resampling, Waterfall Sink, and Audio Sink
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/resample_audio_waterfall.png) 
 
 
