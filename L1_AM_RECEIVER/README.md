@@ -24,6 +24,7 @@ https://wiki.gnuradio.org
 
 ## System Schematic
 The following schematic was designed, constructed, and tested: 
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Schematic/am_receiver_schematic.png) 
 
 ## System Analysis
@@ -41,11 +42,11 @@ The 'QT GUI RANGE' block is similar to a variable block, but with increased para
 
 #### Signal Source Generation and Filtering
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/source_filter_freq.png) 
-
+to-do
 #### Demodulation and Throttling
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/demod_throttle.png) 
-
+to-do
 #### Resampling, Waterfall Sink, and Audio Sink
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/resample_audio_waterfall.png) 
-
+to-do
 
