@@ -16,7 +16,7 @@ The purpose of this laboratory assignment was to introduce and build a simple am
 - Antenna Base & Cable
   
 ## Software Requirements
--Windows, Ubuntu, or MacOS
+- Windows, Ubuntu, or MacOS
 - GNU Radio Companion
 
 ## System Schematic
