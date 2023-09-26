@@ -50,6 +50,22 @@ The 'RTL-SDR' block supports the SDR in use for this experiment, and actually su
 - RF and IF Gain, change our overall gain and the gain between 15 to 30 dB for IF gain.
 - BB Gain, baseband gain of the device.
 
+The 'Low Pass Filter' block is a critical step for this system, the signal passing through this filter is attenuated for values above 5 KHz and accepts values below that frequency. In GNU Radio Companion, this is simply a wrapper for a Decimating FIR Filter. For this system, at this stage, decimation and gain are kept at a value of 1 and the sampling rate remains consistent from previous blocks. The windowing technique for this block has been set to a default 'Hamming'. A notable parameter for this block is:
+
+- Transition Width, set to a value of 1K
+
+The transition width is the range of frequencies where the signal transitions from the passband to the stopband. The full transition width can be found by subtracting the passband frequency from the stopband frequency.
+
+'[insert image from matlab plot]'
+
+Pre-Filtering:
+'[insert image from GNU Radio Companion for Time domain and frequency domain]'
+
+Post-Filtering:
+'[insert image from GNU Radio Companion for Time domain and frequency domain]'
+
+The signal is now ready for demodulation.
+
 #### Demodulation and Throttling
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/demod_throttle.png) 
 to-do
