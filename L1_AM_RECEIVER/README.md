@@ -77,5 +77,5 @@ The 'throttle' block serves a critical purpose for the system in that it limits 
 
 #### Resampling, Waterfall Sink, and Audio Sink
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/resample_audio_waterfall.png) 
-to-do
+to-do Why are we resampling?, show the math behind decimation and interpolation, audio sink explanation, why 32KHz?
 
