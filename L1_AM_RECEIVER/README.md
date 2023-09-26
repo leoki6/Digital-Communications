@@ -64,7 +64,7 @@ Pre-Filtering:
 Post-Filtering:
 '[insert image from GNU Radio Companion for Time domain and frequency domain]'
 
-The signal is now ready for demodulation.
+It is important to be aware of the 'type' of data being processed in this stage, which is 'complex'.The signal is now ready for demodulation.
 
 #### Demodulation and Throttling
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/demod_throttle.png) 
