@@ -54,15 +54,15 @@ The 'Low Pass Filter' block is a critical step for this system, the signal passi
 
 - Transition Width, set to a value of 1K
 
-The transition width is the range of frequencies where the signal transitions from the passband to the stopband. The full transition width can be found by subtracting the passband frequency from the stopband frequency.
+The transition width is the range of frequencies where the signal transitions from the passband to the stopband. The full transition width can be found by subtracting the passband frequency from the stopband frequency. An example of transition width can be seen below:
 
-'[insert image from matlab plot]'
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/transition_width.png)
 
 Pre-Filtering:
-'[insert image from GNU Radio Companion for Time domain and frequency domain]'
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/pre_filter_waveforms.png)
 
 Post-Filtering:
-'[insert image from GNU Radio Companion for Time domain and frequency domain]'
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/post_filtering_waveforms.png)
 
 It is important to be aware of the 'type' of data being processed in this stage, which is 'complex'. Otherwise, the signal is now ready for demodulation.
 
