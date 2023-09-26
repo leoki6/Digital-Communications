@@ -68,7 +68,13 @@ It is important to be aware of the 'type' of data being processed in this stage,
 
 #### Demodulation and Throttling
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/demod_throttle.png) 
-to-do
+
+The 'AM Demod' block takes the received complex signal and turns it into the original baseband signal (real float).
+
+todo: Audio Pass, Audio Stop, 
+
+The 'throttle' block serves a critical purpose for the system in that it limits the rate at which the source signal block generates samples. Without this, the performance of simulation may suffer and cause the CPU of your computer to grind to a halt. The 'throttle' block is not always accurate and should not be preffered over using an actual hardware sink/source in conjunction with a sample clock. In this case, the 'throttle' block accepts a real float as an input and output.
+
 #### Resampling, Waterfall Sink, and Audio Sink
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/resample_audio_waterfall.png) 
 to-do
