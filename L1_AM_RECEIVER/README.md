@@ -93,6 +93,11 @@ The 'QT GUI Waterfall Sink' creates a spectrogram of the demodulated signal and 
 The 'Audio Sink' block allows the user to listen to the filtered, demodulated, refiltered, and resampled signal depending on the user's hardware. This block actually supports stereo audio with a max input of 2 and has a limited number of sampling rates. 
 
 #### Results
-Discussion, Frequency Spectrum, and Waterfall
+Discussion, Frequency Spectrum, and Waterfall [TODO]
+
+#### Future Experimentation
+[TODO]
+
 #### Conclusion
-todo
+This laboratory experiment introduced a simple AM Receiver for use with SDR hardware, which in theory, allows one to tune into AM radio stations in range. Concepts such as modulation, demodulation, and resamping in conjunction with parameters such as center frequency were emphasized in this experiment. This paves a very general path that can be used to begin experimenting with FM despite its increased complexity and associated theory.
+
