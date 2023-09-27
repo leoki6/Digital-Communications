@@ -4,3 +4,4 @@ A collection of laboratory assignments and projects, alongside documentation, de
 
 ## Table of Contents
 - [LAB 1: AM RECEIVER](/L1_AM_RECEIVER)
+- [LAB 1: FM RECEIVER](/L2_AM_RECEIVER)
