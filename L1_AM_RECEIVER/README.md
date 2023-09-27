@@ -50,7 +50,7 @@ The 'RTL-SDR' block supports the SDR in use for this experiment, and actually su
 - RF and IF Gain, change our overall gain and the gain between 15 to 30 dB for IF gain.
 - BB Gain, baseband gain of the device.
 
-The 'QT GUI Frequency Sink' block [TODO]
+The 'QT GUI Frequency Sink' block creates the PSD for the desired signal which provides information on the power of a signal at different frequencies. It can also help establish the frequency range the system operates in
 
 The 'Low Pass Filter' block is a critical step for this system, the signal passing through this filter is attenuated for values above 5 KHz and accepts values below that frequency. In GNU Radio Companion, this is simply a wrapper for a Decimating FIR Filter. For this system, at this stage, decimation and gain are kept at a value of 1 and the sampling rate remains consistent from previous blocks. The windowing technique for this block has been set to a default 'Hamming'. A notable parameter for this block is:
 
@@ -71,7 +71,9 @@ It is important to be aware of the 'type' of data being processed in this stage,
 #### Demodulation and Throttling
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/demod_throttle.png) 
 
-The 'AM Demod' block takes the received complex signal and turns it into the original baseband signal (real float). The audio start and stop parameters indicate the additional low pass filtering being executed in this block. In this case, one can see these parameters as a transition width which is about 500 Hz.
+The 'AM Demod' block takes the received complex signal and turns it into the original baseband signal (real float). The audio start and stop parameters indicate the additional low pass filtering being executed in this block. In this case, one can see these parameters as a transition width which is about 500 Hz. 
+
+Note: Having different filtering stages prevents having to create a high-order low pass filter to deal with the first transition width (1K) and the second (500 Hz).
 
 The 'throttle' block serves a critical purpose for the system in that it limits the rate at which the source signal block generates samples. Without this, the performance of simulation may suffer and cause the CPU of your computer to grind to a halt. The 'throttle' block is not always accurate and should not be preffered over using an actual hardware sink/source in conjunction with a sample clock. In this case, the 'throttle' block accepts a real float as an input and output.
 
@@ -84,11 +86,11 @@ Incoming Sample Rate = 400K = (400k * 32) = 12800000 Hz / 400 = 32 KHz
 
 It is important to first interpolate because the reverse yields a float which is incompatible with the design of this system at this stage.
 
-The 'QT GUI Waterfall Sink' [TODO]
+The 'QT GUI Waterfall Sink' creates a spectrogram of the demodulated signal and can only accept a single input stream at a time. This plot indicates what frequencies in the received signal contain the most energy. 
 
-The 'Audio Sink' [TODO]
+The 'Audio Sink' block allows the user to listen to the filtered, demodulated, refiltered, and resampled signal depending on the user's hardware. This block actually supports stereo audio with a max input of 2 and has a limited number of sampling rates. 
 
 #### Results
-todo
+Discussion, Frequency Spectrum, and Waterfall
 #### Conclusion
 todo
