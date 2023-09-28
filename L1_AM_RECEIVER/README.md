@@ -96,8 +96,7 @@ The 'Audio Sink' block allows the user to listen to the filtered, demodulated, r
 ## Results
 The lowest detectable frequency the RTL-SDR is capable of processing is 65MHz. Unfortunately, the overwhelming majority of AM radio stations are between 535 to 1705 KHz. This is not to say that the user cannot implement a small-scale transmitter to test the frequency range of the SDR and the system designed provided they exercise all necessary precautions and certifications. The following plots were generated with a center frequency of 100 MHz, which makes the majority of the data noise, but this noise can still be analyzed to observe its frequency components relative to its energies and its behavior over time (waterfall).
 
-[Freq Plot]
-[Waterfall Plot]
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/final_freq_waterfall.png)
 
 ## Results Discussion
 Discussion of Frequency Spectrum and Waterfall [TODO]
