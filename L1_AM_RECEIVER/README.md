@@ -7,6 +7,7 @@
 - [Software Requirements](#technology-description)
 - [System Analysis](#system-analysis)
 - [Results](#results)
+- [Results Discussion](#results-discussion)
 - [Conclusion](#conclusion)
 
 ## Laboratory Objective
@@ -99,7 +100,7 @@ The lowest detectable frequency the RTL-SDR is capable of processing is 65MHz. U
 [Waterfall Plot]
 
 ## Results Discussion
-Discussion, Frequency Spectrum, and Waterfall [TODO]
+Discussion of Frequency Spectrum and Waterfall [TODO]
 
 ## Future Experimentation
 In the future, it may be worth while to introduce the 'Ham It Up Plus' by Nooelec into the system despite its cost. This piece of hardware can extend the range of the system down to 300 Hz which will enable the user to tune into AM Radio with, ideally, with better fidelity. The hardware is pictured below:
