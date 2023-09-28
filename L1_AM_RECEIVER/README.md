@@ -34,9 +34,9 @@ The following schematic was designed, constructed, and tested:
 #### Preliminary Variables, Options, and Ranges
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/variables_ranges_options.png) 
 
-The 'options' block in the image above allows one to set specific parameters such as a title and author to begin constructing the flow graph. Additionally, one can set the output language, windowing size, file id, and so on. It is important to note that there is only one options block allowed per blockgraph.
+The 'options' block in the image above allows one to set specific parameters such as a title and author to begin constructing the flow graph. Additionally, one can set the output language, windowing size, file id, and so on. It is important to note that there is only one options block allowed per flow graph.
 
-The 'variable' block allows one to assign a specific value to a specific id that can be reused in later blocks to save time. In this case, the id 'samp_rate' has been set to 400K. (still need to justify this)
+The 'variable' block allows one to assign a specific value to a specific id that can be reused in later blocks to save time or perform mathematical operations. In this case, the id 'samp_rate' has been set to 400K. (still need to justify this)
 
 The 'QT GUI RANGE' block is similar to a variable block, but with increased parameters such as a changeable label, start, stop, step size, and type. This block is primarily useful when simulating because it introduces a moveable slider that can be adjusted to observe real-time system behavior. In this case we have set:
 
