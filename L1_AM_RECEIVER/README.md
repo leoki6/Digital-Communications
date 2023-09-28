@@ -99,10 +99,10 @@ The lowest detectable frequency the RTL-SDR is capable of processing is 65MHz. U
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/final_freq_waterfall.png)
 
 ## Results Discussion
-Discussion of Frequency Spectrum and Waterfall [TODO]
+The results indicate that the baseband signal is centered at 100 MHz which can be adjusted using the sliders constructed. According to the waterfall plot, the majority of the baseband signal's energy resides between 100006 KHz and 99993 KHz which is a difference of about 13 KHz. Ideally, provided there were AM stations in the frequency range of the SDR, moving the center frequency slider would allow one to tune into different radio stations
 
 ## Future Experimentation
-In the future, it may be worth while to introduce the 'Ham It Up Plus' by Nooelec into the system despite its cost. This piece of hardware can extend the range of the system down to 300 Hz which will enable the user to tune into AM Radio with, ideally, with better fidelity. The hardware is pictured below:
+In the future, it may be worth while to introduce the 'Ham It Up Plus' by Nooelec into the system despite its cost. This piece of hardware can extend the range of the system down to 300 Hz which will enable the user to tune into AM Radio with, ideally, better fidelity. The hardware is pictured below:
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/ham_it_up.png)
 
