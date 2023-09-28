@@ -93,12 +93,18 @@ The 'QT GUI Waterfall Sink' creates a spectrogram of the demodulated signal and 
 The 'Audio Sink' block allows the user to listen to the filtered, demodulated, refiltered, and resampled signal depending on the user's hardware. This block actually supports stereo audio with a max input of 2 and has a limited number of sampling rates. 
 
 ## Results
+The lowest detectable frequency the RTL-SDR is capable of processing is 65MHz. Unfortunately, the overwhelming majority of AM radio stations are between 535 to 1705 KHz. This is not to say that the user cannot implement a small-scale transmitter to test the frequency range of the SDR and the system designed provided they exercise all necessary precautions and certifications. The following plots were generated with a center frequency of 100 MHz, which makes the majority of the data noise, but this noise can still be analyzed to observe its frequency components relative to its energies and its behavior over time (waterfall).
+
+[Freq Plot]
+[Waterfall Plot]
+
+## Results Discussion
 Discussion, Frequency Spectrum, and Waterfall [TODO]
 
 ## Future Experimentation
-In the future, it may be worth while to introduce the 'Ham It Up Plus' by Nooelec into the system despite its cost. This piece of hardware can extend the range of the system down to 300 Hz which will enable the user to tune into AM Radio with, ideally, with better fidelity. The hardware is pictured below.
+In the future, it may be worth while to introduce the 'Ham It Up Plus' by Nooelec into the system despite its cost. This piece of hardware can extend the range of the system down to 300 Hz which will enable the user to tune into AM Radio with, ideally, with better fidelity. The hardware is pictured below:
 
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/resample_audio_waterfall.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L1_AM_RECEIVER/Additional%20Figures/ham_it_up.png)
 
 ## Conclusion
 This laboratory experiment introduced a simple AM Receiver for use with SDR hardware, which in theory, allows one to tune into AM radio stations in range. Concepts such as modulation, demodulation, and resamping in conjunction with parameters such as center frequency were emphasized in this experiment. This paves a very general path that can be used to begin experimenting with FM despite its increased complexity and associated theory.
