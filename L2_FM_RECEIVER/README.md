@@ -22,8 +22,8 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 - GNU Radio Companion
 
 ## Useful Resources
-https://wiki.gnuradio.org
-https://complextoreal.com/tutorials/tutorial-17-frequency-modulation-fm-fsk-msk-and-more/
+- https://wiki.gnuradio.org
+- https://complextoreal.com/tutorials/tutorial-17-frequency-modulation-fm-fsk-msk-and-more/
 
 ## System Schematic
 
