@@ -28,6 +28,13 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 ## System Schematic
 
 ## System Analysis
+#### Preliminary Variables, Options, and Ranges
+
+#### Signal Source Generation and Filtering
+
+#### Demodulation and Throttling
+
+#### Resampling, Waterfall Sink, and Audio Sink
 
 ## Results
 
