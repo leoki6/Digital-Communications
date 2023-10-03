@@ -29,8 +29,10 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 
 ## System Analysis
 #### Preliminary Variables, Options, and Ranges
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/prelim_vars.png)
 
-#### Signal Source Generation and Filtering
+#### Signal Source Generation, Initial Resampling, and Demodulation
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/generation_resample_demod.png)
 
 #### Demodulation and Throttling
 
