@@ -28,6 +28,10 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 ## System Schematic
 
 ## System Analysis
+The majority of system blocks used in this experiment have been previously described in detail, thus only new system blocks are thoroughly described. Please refer to the following experiment for in-depth explanations of reused system blocks:
+
+https://github.com/leoki6/Digital-Communications/tree/main/L1_AM_RECEIVER
+
 #### Preliminary Variables, Options, and Ranges
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/prelim_vars.png)
 
