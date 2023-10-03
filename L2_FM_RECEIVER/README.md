@@ -31,12 +31,14 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 #### Preliminary Variables, Options, and Ranges
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/prelim_vars.png)
 
+This system uses one variable to set up and reuse a sampling rate of 2 MHz and three ranges for volume, frequency, and gain that can be adjusted on the fly when running the system. The range for gain specifically adjusts the gain of the 'SDR-RTL' source. The range for volume adjusts a 'multiply const' block that can help fine tune the demodulated signal for better fidelity and listening. The range for frequency is what the user interacts with the most often to directly tune into FM stations such as 91.2 MHz.
+
 #### Signal Source Generation, Initial Resampling, and Demodulation
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/generation_resample_demod.png)
 
-#### Demodulation and Throttling
+#### Resampling, Frequency and Waterfall Visualization, and Audio Sink
 
-#### Resampling, Waterfall Sink, and Audio Sink
+#### Relevant Theory
 
 ## Results
 
