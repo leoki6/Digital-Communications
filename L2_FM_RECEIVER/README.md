@@ -46,7 +46,7 @@ This system uses one variable to set up and reuse a sampling rate of 2 MHz and t
 
 ## Results
 
-## Future Experimentation
+## Additional Experimentation
 
 ## Conclusion
 
