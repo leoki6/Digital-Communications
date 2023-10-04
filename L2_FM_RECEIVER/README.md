@@ -46,6 +46,13 @@ This system uses one variable to set up and reuse a sampling rate of 2 MHz and t
 #### Relevant Theory
 The general definition of frequency modulation can be thought of as varying the instantaneous frequency of the carrier signal in relation to the instantanous value of the modulating signal. We can rely on the following equation:
 
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/mod_eqn_v2.png)
+
+Where s(t) is the frequency modulated signal, f_c is the carrier frequency, k_f is the modulation index, and m(t) is the desired message signal. A key idea in the derivation of this equation is instantaneous frequency. It allows one to relate phase and frequency according to the equation below:
+
+
+
+
 
 
 ## Results
