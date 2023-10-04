@@ -27,7 +27,7 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 - https://complextoreal.com/tutorials/tutorial-17-frequency-modulation-fm-fsk-msk-and-more/
 
 ## System Schematic
-
+TODO
 ## System Analysis
 The majority of system blocks used in this experiment have been previously described in detail, thus only new system blocks are thoroughly described. Please refer to the following experiment for in-depth explanations of reused system blocks:
 
@@ -41,7 +41,10 @@ This system uses one variable to set up and reuse a sampling rate of 2 MHz and t
 #### Signal Source Generation, Initial Resampling, and Demodulation
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/generation_resample_demod.png)
 
+TODO: Describe the first half of the system in general terms and show how the sampling rate is changing mathematically
+
 #### Resampling, Frequency and Waterfall Visualization, and Audio Sink
+TODO: Describe the latter half of the system in general terms and show how the samping rate has changed when it reaches the audio sink
 
 #### Relevant Theory
 The general definition of frequency modulation can be thought of as varying the instantaneous frequency of the carrier signal in relation to the instantanous value of the modulating signal. We can rely on the following equation:
@@ -50,14 +53,16 @@ The general definition of frequency modulation can be thought of as varying the 
 
 Where s(t) is the frequency modulated signal, f_c is the carrier frequency, k_f is the modulation index, and m(t) is the desired message signal. A key idea in the derivation of this equation is instantaneous frequency. It allows one to relate phase and frequency according to the equation below:
 
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/phase_freq_relation.png)
 
-
-
-
+This relation is critical because integrating a PM signal will produce an FM signal and taking the derivative of an FM signal will produce a PM signal. Even with a simple message such as a cosine wave it enlists the use of special trignometric identities to produce Bessel equations. Typically, only first-kind Bessel equations are of interest and they help identify where the ampltitude of some sidebands are zero. Additionally, Bessel functions in conjunction with the modulation index help describe the spread of the sidebands and how energy may be distributed across it. There are a large variety of complexities assocaited with FM theory and it is best to consult a dedicated resource.
 
 ## Results
+TODO: waterfall, and freq analysis description
 
 ## Additional Experimentation
+TODO: describe the use of cobra radios in class
 
 ## Conclusion
+TODO:
 
