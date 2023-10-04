@@ -11,7 +11,7 @@
 - [Conclusion](#conclusion)
 
 ## Laboratory Objective
-The purpose of this laboratory experiment was to introduce and build a simple FM receiver capable of tuning into local FM sations in Denver, CO. It follows a very similar structure to the previous AM receiver, but has more complex underlying theory and principles particularly with analog FM techniques. Concepts emphasized include bessel functions, instantaneous frequency, and modulation index. This experiment utilized GNU Radio Companion software and a NooElec RTL-SDR to achieve the laboratory objective.
+The purpose of this laboratory experiment was to introduce and build a simple FM receiver capable of tuning into local FM sations in Denver, CO. It follows a very similar structure to the previous AM receiver, but has more complex underlying theory and principles particularly with analog FM techniques. Concepts emphasized include instantaneous frequency, modulation index, and mathematical representations. This experiment utilized GNU Radio Companion software and a NooElec RTL-SDR to achieve the laboratory objective.
 
 ## Hardware Requirements
 - NooElec NESDR Smart XTR SDR - Premium RTL-SDR
@@ -44,6 +44,9 @@ This system uses one variable to set up and reuse a sampling rate of 2 MHz and t
 #### Resampling, Frequency and Waterfall Visualization, and Audio Sink
 
 #### Relevant Theory
+The general definition of frequency modulation can be thought of as varying the instantaneous frequency of the carrier signal in relation to the instantanous value of the modulating signal. We can rely on the following equation:
+
+
 
 ## Results
 
