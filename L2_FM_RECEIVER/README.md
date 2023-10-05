@@ -71,10 +71,15 @@ This relation is critical because integrating a PM signal will produce an FM sig
 
 ## Results
 After successfully demodulating the baseband signal, the waterfall and FFT plots were obtained and are shown below:
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/demod_waterfall_fft.png)
 
+A center frequency of 95.65 MHz was used to tune into a local FM radio station, but this can be adjusted to a value pertinent to a user's local FM station.
+
 ## Results Discussion
-TODO: describe previous plots
+After adjusting the frequency slider to a value of 95.65 MHz or 91.2 MHz, the user was able to listen to live radio stations and observe a real time feed of the waterfall and FFT plots. This allowed one to observe changes in those plots, as the frequency slider was adjusted, and see how small disturbances, such as merely touching the mast, can affect the fidelity of the baseband.
+
+One can observe that most of the energy is in the center frequency, and is spread out according to f_c - f_m and f_c + f_m. One can also observe the 'distortions' caused by the summation of sync functions in the sidebands. 
 
 ## Additional Experimentation
 Besides tuning into radio stations, it is feasible to tune into a wealth of frequencies involving walkie talkies such as the Cobra ACXT145 pictured below:
