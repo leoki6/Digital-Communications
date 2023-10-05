@@ -11,7 +11,7 @@
 - [Conclusion](#conclusion)
 
 ## Laboratory Objective
-The purpose of this laboratory experiment was to introduce and build a simple FM receiver capable of tuning into local FM sations in Denver, CO. It follows a very similar structure to the previous AM receiver, but has more complex underlying theory and principles particularly with analog FM techniques. Concepts emphasized include instantaneous frequency, modulation index, and mathematical representations. This experiment utilized GNU Radio Companion software and a NooElec RTL-SDR to achieve the laboratory objective.
+The purpose of this laboratory experiment was to introduce and build a simple FM receiver capable of tuning into local FM stations in Denver, CO. It follows a very similar structure to the previous AM receiver, but has more complex underlying theory and principles particularly with analog FM techniques. Concepts emphasized include instantaneous frequency, modulation index, and mathematical representations. This experiment utilized GNU Radio Companion software and a NooElec RTL-SDR to achieve the laboratory objective.
 
 ## Hardware Requirements
 - NooElec NESDR Smart XTR SDR - Premium RTL-SDR
@@ -27,7 +27,7 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 - https://complextoreal.com/tutorials/tutorial-17-frequency-modulation-fm-fsk-msk-and-more/
 
 ## System Schematic
-The FM receiver was designed and tested according to the follow system diagram:
+The FM receiver was designed and tested according to the following system diagram:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/General_System_Diagram/system_block_diagram.png)
 
 ## System Analysis
@@ -67,7 +67,7 @@ Where s(t) is the frequency modulated signal, f_c is the carrier frequency, k_f 
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/phase_freq_relation.png)
 
-This relation is critical because integrating a PM signal will produce an FM signal and taking the derivative of an FM signal will produce a PM signal. Even with a simple message, such as a cosine wave, it enlists the use of special trignometric identities to produce Bessel functions. Typically, only first-kind Bessel equations are of interest and they help identify where the ampltitude of some sidebands are zero. Additionally, Bessel functions in conjunction with the modulation index help describe the spread of the sidebands and how energy may be distributed across it. There are a large variety of complexities assocaited with FM theory and it is best to consult a dedicated resource.
+This relation is critical because integrating a PM signal will produce an FM signal and taking the derivative of an FM signal will produce a PM signal. Even with a simple message, such as a cosine wave, it enlists the use of special trignometric identities to produce Bessel functions. Typically, only first-kind Bessel functions are of interest and they help identify where the ampltitude of some sidebands are zero. Additionally, Bessel functions in conjunction with the modulation index help describe the spread of the sidebands and how energy may be distributed across it. There are a large variety of complexities assocaited with FM theory and it is best to consult a dedicated resource.
 
 ## Results
 After successfully demodulating the baseband signal, the waterfall and FFT plots were obtained and are shown below:
@@ -86,7 +86,7 @@ Besides tuning into radio stations, it is feasible to tune into a wealth of freq
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/cobra_radio.png)
 
-These radios operate according to the Family Radio Service which are channelized frequencies operating between 462 and 467 MHz. This specific model supports 22 channels. Channels 17 to 22 use 2 W instead of 500 mW, thus one can use the waterfall plot to observe this increase in power. One can also observe the call alert of the walkie talkie on the waterfall plot and even listen in on the conversation after some tinkering in GNU Radio Companion. A critical observation is when both walkie talkies are trying to transmit at the same time they interfere with one another and nothing is communicated. This highlights the lack of access control for the hardware for example Ethernet and CSMA/CD.
+These radios operate according to the Family Radio Service which are channelized frequencies operating between 462 and 467 MHz. This specific model supports 22 channels. Channels 17 to 22 use 2 W instead of 500 mW, thus one can use the waterfall plot to observe this increase in power. One can also observe the call alert of the walkie talkie on the waterfall plot and even listen in on the conversation after some tinkering in GNU Radio Companion. A critical observation is when both walkie talkies are trying to transmit at the same time -- they interfere with one another and nothing is communicated. This highlights the lack of access control for the hardware for example Ethernet and CSMA/CD.
 
 A center frequency of 462.5625 MHz was used for this additional experimentation.
 
