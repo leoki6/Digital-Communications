@@ -45,14 +45,16 @@ This system uses one variable to set up and reuse a sampling rate of 2 MHz and t
 
 The message signal is generated using the frequency range slider created previously, and a sampling rate of 2 MHz. This passes through a low pass filter within the 'SDR-RTL' and is resampled to meet the channel rate of the 'FM Demod' block (400k).
 
-The 'FM Demod' block takes a band-limited, complex down-converted FM channel and turns it into the message signal. Low pass filtering is performed at the end of this conversion. There is an additional option to incorporate 'deemphasis'. 
+The 'FM Demod' block takes a band-limited, complex down-converted FM channel and turns it into the message signal according to existing GNU Radio documentation. Low pass filtering is performed at the end of this conversion. There is an additional option to incorporate 'deemphasis'. 
 
 Sample Rate = 2M / 5 = 400K
 
 This is the current sample rate at this point in the system. Keeping track of this value is critical.
 
 #### Resampling, Frequency and Waterfall Visualization, and Audio Sink
-TODO: Describe the latter half of the system in general terms
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/resamp_audio_plots.png)
+
+
 
 Sample Rate = 400K*32 = 12800000/400 = 32 KHz
 
@@ -75,7 +77,13 @@ After successfully demodulating the baseband signal, the waterfall and FFT plots
 TODO: describe previous plots
 
 ## Additional Experimentation
-TODO: describe the use of cobra radios in class
+Besides tuning into radio stations, it is feasible to tune into a wealth of frequencies involving walkie talkies such as the Cobra ACXT145 pictured below:
+
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/cobra_radio.png)
+
+These radios operate according to the Family Radio Service which are channelized frequencies operating between 462 and 467 MHz. This specific model supports 22 channels. Channels 17 to 22 use 2 W instead of 500 mW, thus one can use the waterfall plot to observe this increase in power. One can also observe the call alert of the walkie talkie on the waterfall plot and even listen in on the conversation after some tinkering in GNU Radio Companion. A critical observation is when both walkie talkies are trying to transmit at the same time they interfere with one another and nothing is communicated. This highlights the lack of access control for the hardware for example Ethernet and CSMA/CD.
+
+A center frequency of 462.5625 MHz was used for this additional experimentation.
 
 ## Conclusion
 TODO:
