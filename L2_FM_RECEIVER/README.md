@@ -67,7 +67,7 @@ Where s(t) is the frequency modulated signal, f_c is the carrier frequency, k_f 
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/phase_freq_relation.png)
 
-This relation is critical because integrating a PM signal will produce an FM signal and taking the derivative of an FM signal will produce a PM signal. Even with a simple message such as a cosine wave it enlists the use of special trignometric identities to produce Bessel equations. Typically, only first-kind Bessel equations are of interest and they help identify where the ampltitude of some sidebands are zero. Additionally, Bessel functions in conjunction with the modulation index help describe the spread of the sidebands and how energy may be distributed across it. There are a large variety of complexities assocaited with FM theory and it is best to consult a dedicated resource.
+This relation is critical because integrating a PM signal will produce an FM signal and taking the derivative of an FM signal will produce a PM signal. Even with a simple message, such as a cosine wave, it enlists the use of special trignometric identities to produce Bessel functions. Typically, only first-kind Bessel equations are of interest and they help identify where the ampltitude of some sidebands are zero. Additionally, Bessel functions in conjunction with the modulation index help describe the spread of the sidebands and how energy may be distributed across it. There are a large variety of complexities assocaited with FM theory and it is best to consult a dedicated resource.
 
 ## Results
 After successfully demodulating the baseband signal, the waterfall and FFT plots were obtained and are shown below:
