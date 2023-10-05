@@ -27,7 +27,8 @@ The purpose of this laboratory experiment was to introduce and build a simple FM
 - https://complextoreal.com/tutorials/tutorial-17-frequency-modulation-fm-fsk-msk-and-more/
 
 ## System Schematic
-TODO
+The FM receiver was designed and tested according to the follow system diagram:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/General_System_Diagram/system_block_diagram.png)
 
 ## System Analysis
 The majority of system blocks used in this experiment have been previously described in detail, thus only new system blocks are thoroughly described. Please refer to the following experiment for in-depth explanations of reused system blocks:
