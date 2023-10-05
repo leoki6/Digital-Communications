@@ -54,7 +54,7 @@ This is the current sample rate at this point in the system. Keeping track of th
 #### Resampling, Frequency and Waterfall Visualization, and Audio Sink
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L2_FM_RECEIVER/Additional_Figures/resamp_audio_plots.png)
 
-
+Similar to the AM Recevier, the sample rate of the demodulated signal is too high for the audio sink of our local hardware to handle. Thus, the 2 MHz rate is resampled to 32 KHz and has an additional 'multiply const' block to control the volume as a slider when running the program.
 
 Sample Rate = 400K*32 = 12800000/400 = 32 KHz
 
