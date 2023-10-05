@@ -91,5 +91,5 @@ These radios operate according to the Family Radio Service which are channelized
 A center frequency of 462.5625 MHz was used for this additional experimentation.
 
 ## Conclusion
-TODO:
+This laboratory experiment successfully designed, tested, and implemented a fairly simple FM receiver capable of tuning into not only local FM radio stations, but as well as walkie talkie frequencies and numerous other capabilities. By keeping track of specific parameters such as center frequency, sampling rate, and decimation/interpolation the baseband signal was able to be demodulated and heard through computer speakers and observed on frequency plots for analysis. 
 
