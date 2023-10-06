@@ -5,3 +5,4 @@ A collection of laboratory assignments and projects, alongside documentation, de
 ## Table of Contents
 - [LAB 1: AM RECEIVER](/L1_AM_RECEIVER)
 - [LAB 2: FM RECEIVER](/L2_FM_RECEIVER)
+- [LAB 3: FSK RX & TX](/L3_FSK_TRANSMITTER_RECEIVER)
