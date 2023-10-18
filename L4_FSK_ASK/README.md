@@ -1,4 +1,4 @@
-# Lab 2 - FM Receiver
+# Lab 4 - FM Receiver
 
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
