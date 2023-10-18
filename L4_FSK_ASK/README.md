@@ -1,4 +1,4 @@
-# Lab 4 - FM Receiver
+# Lab 4 - TITLE PENDING
 
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
