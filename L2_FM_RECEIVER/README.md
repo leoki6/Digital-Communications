@@ -3,8 +3,8 @@
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
 - [System Schematic](#system-schematic)
-- [Hardware Requirements](#technology-description)
-- [Software Requirements](#technology-description)
+- [Hardware Requirements](#hardware-requirements)
+- [Software Requirements](#software-requirements)
 - [System Analysis](#system-analysis)
 - [Results](#results)
 - [Additional Experimentation](#additional-experimentation)
