@@ -1,4 +1,4 @@
-# Lab 3 - Transceiver and Receiver
+# Lab 3 - FSK Transceiver and Receiver GNU Radio
 
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
