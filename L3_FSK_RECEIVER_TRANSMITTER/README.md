@@ -3,7 +3,6 @@
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
 - [System Schematic](#system-schematic)
-- [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
 - [System Analysis](#system-analysis)
 - [Results](#results)
@@ -45,8 +44,6 @@ https://github.com/leoki6/Digital-Communications
 
 
 ## Results Discussion
-
-
 
 ## Additional Experimentation
 
