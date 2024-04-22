@@ -19,7 +19,7 @@ In this experiment, students implemented a transceiver and receiver capable of h
 - https://wiki.gnuradio.org
   
 ## System Schematic
-The entire system is pictured below:
+The entire system is depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Sys_Diag.png)
 
 ## System Analysis
@@ -28,9 +28,20 @@ The majority of system blocks used in this experiment have been previously descr
 https://github.com/leoki6/Digital-Communications
 
 ### Message Generation & Modulation
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Message_Gen_Modulation.png)
+
+The first step in creating the FSK transmitter is generating a digital message using the vector source block and an interpolation block. This repeats the signal sufficiently for modulation and consists of two levels (-1 or 1). Following this, the generated signal enters a frequency modulation block where its components are changed into I and Q signals according to the sampling rate, deviation, and threshold. 
+
+This IQ signal is then multiplied with a higher frequency carrier for transmission across some medium. A source block generates a 2 MHz cosine wave with a sampling rate of 8 MHz which is then passed into a sampling rate limiter to ensure the rate remains consistent and is then passed into the multiplication block. The resulting time domain waveform from this step is difficult to read thus the waterfall plot of this wave is emphasized. The signal is then passed into a virtual sink acting as a placeholder for the medium.
+
+The digital message generated can be seen below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Dig_Message.png)
+
+The IQ signals generated from the frequency mod block are seen below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/IQ_Signals.png)
+
+The waterfall plot of the modulated signal with the carrier is shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Waterfall_Mod.png)
 
 ### Demodulation & Filtering
