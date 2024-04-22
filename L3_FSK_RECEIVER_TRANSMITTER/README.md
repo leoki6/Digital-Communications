@@ -59,8 +59,11 @@ Waterfall plot of the demodulated and filtered signal:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Demod_Filtered.png)
 
 ### Clean-Up & Display
-The last step involves cleaning up the signal further using 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Conversion_Display.png)
+
+The last step involves cleaning up the signal further by primarily using a binary slicer as a comparator. This keeps the amplitude levels constant, sharpens transitions, and applies a constant to resize the signal. Since the binary slicer outputs 1s and 0s of the type char, its output is passed to a char-float converter and then finally displayed as a demodulated, filtered, and processed signal that would be available at the receiver.
+
+The demodulated and cleaned up signal the receiver sees is depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/R_Output.png)
 
 
