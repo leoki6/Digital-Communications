@@ -46,10 +46,20 @@ The waterfall plot of the modulated signal with the carrier is shown below:
 
 ### Demodulation & Filtering
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Demodulation_Filtering.png)
+Following the generation and transmission, the receiver now needs to process, clean-up, and display the signal. This first involves passing the modulated signal into a low pass filter to effectively remove the high frequency carrier components with a center frequency of 2 MHz and a sampling rate in line with previous blocks. Alternatively, it can be understood that this filter works as a channelizer that grabs a narrow baseband signal from a much larger stream.
+
+This signal is then passed into a quadrature demodulation block. This block takes the product of the one sample delayed-conjugated input and an underdelayed signal and then caluclates the resulting angle in radians thus outputing a complex number. It then effectively extracts the symbols by comparing the upper and lower frequencies using the fsk deviation assigning 1s and 0s accordingly.
+
+The filtered signal and demodulated signal is then passed to a virtual sink for further processing as the signal is not meeting desired characteristics.
+
+The demodulated output is shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Demod_Output.png)
+
+Waterfall plot of the demodulated and filtered signal:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Demod_Filtered.png)
 
-### Conversion & Display
+### Clean-Up & Display
+The last step involves cleaning up the signal further using 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Conversion_Display.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/R_Output.png)
 
