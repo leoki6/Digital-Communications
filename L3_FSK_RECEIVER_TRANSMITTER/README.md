@@ -23,7 +23,7 @@ The entire system is depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_RECEIVER_TRANSMITTER/Figures/Sys_Diag.png)
 
 ## System Analysis
-The majority of system blocks used in this experiment have been previously described in detail, thus only critical sub-processes and new modules. Please refer to the following repository for in-depth explanations of reused system blocks:
+The majority of system blocks used in this experiment have been previously described in detail, thus only critical sub-processes and new modules will be described. Please refer to the following repository for in-depth explanations of reused system blocks:
 
 https://github.com/leoki6/Digital-Communications
 
