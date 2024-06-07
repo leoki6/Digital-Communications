@@ -1,4 +1,4 @@
-# Lab 4 - TITLE PENDING
+# Lab 4 - FSK & ASK Comparison and Analysis
 
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
