@@ -68,8 +68,13 @@ The demodulated and cleaned up signal the receiver sees is depicted below:
 
 
 ## Results Discussion
+The output signal of the system indicates that the input signal was successfully modulated, transmitted, and demodulated. It has indentical characterisitics from input to output which indicates no loss of information or unintended noise. By carefully keeping track of the sampling rate across different component blocks, the signal maintained its fidelity.
+
+It is important to note the similarities between FM and FSK. The primary usefulness of FSK lies in its abillity to transmit digital information, with multiple frequencies to transmit a desired amount of symbols. This cuts down on bandwidth, and improves efficiency. The predetermined frequencies are discrete which makes demodulation simpler. FM has a variation relative to the amplitude of the input signal. FMs primary usefulness lies in its abillity to transmit analog data with specific applications like radio and audio. Their biggest similarity is the use of frequency to encode information and their increased resistance to noise.
 
 ## Additional Experimentation
+Moving forward, it would be worthwhile to model a noisy channel to observe the impacts of noise, and the limited bandwidth of that channel. This is useful for students because it simulates communication systems closer to real life where factors like weather, electromagnetic intereference, buildings, and mountains can result in attenuation and errors in logic. It also serves to give a light introduction into error detection and correction as they are critical for data fidelity. It also highlights the trade-offs between fidelity, speed, and complexity.
 
 ## Conclusion
+This laboratory experiment served to model a relatively simple FSK receiver and transmitter where a digital signal was effectively paired with a carrier and encoded according to relevant frequencies. The process involved not only modulation and demodulation, but the use of comparators and filters to clean up the signal. This indicated to students that the complexity of communication systems does not stop, by simply multiplying by the stolen carrier. It also served as a comparison between FM as it also uses frequency to encode information.
 
