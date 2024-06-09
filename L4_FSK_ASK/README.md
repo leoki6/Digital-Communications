@@ -54,11 +54,13 @@ ________________________________________________________________________________
 Shifting to FSK analysis, the general steps are similar, but the encoding of information involves variations in defined frequencies as opposed to amplitude. The first stage involves feeding a 2 KHz signal into the sequence generator and then into the VCO to generate the FSK signal. As shown in the figure below, the frequency changes for logic 1 and again for logic 0. The mark frequency represents a binary 1 and the space frequency represents a binary 0. One can observe that the mark frequency has more cycles than the space though this is not a hard requirement for FSK signals. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/7_FSK_Gen.png)
 
-The second stage involves demodulating the FSK signal using the same techniques as ASK which is a low pass filter, envelope detector, and baseband LPF channel. The initial filter removes the mark frequency as it is higher. This leaves the space frequency intact and active for logic 1 and inactive for 0. The baseband LPF identifies the baseband signal by performing further filtering and acting as a bandlimited channel. 
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/8_FSK_LP.png)
+The second stage involves demodulating the FSK signal using the same techniques as ASK which is a low pass filter, envelope detector, and baseband LPF channel. The initial filter removes the mark frequency as it is higher. This leaves the space frequency intact and active for logic 1 and inactive for 0. The baseband LPF identifies the baseband signal by performing further filtering and acting as a bandlimited channel. The output following this process is depicted below:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/9_Recov.png)
+
+
 
 Similar to ASK, the final stage involves using a comparator to sharpen transitions and obtain an acceptable copy of the original digital message.
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/9_FSK_Recov.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/10_FSK_Comparator.png)
 
 ## Results Discussion
 
