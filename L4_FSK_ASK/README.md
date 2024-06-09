@@ -55,12 +55,10 @@ Shifting to FSK analysis, the general steps are similar, but the encoding of inf
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/7_FSK_Gen.png)
 
 The second stage involves demodulating the FSK signal using the same techniques as ASK which is a low pass filter, envelope detector, and baseband LPF channel. The initial filter removes the mark frequency as it is higher. This leaves the space frequency intact and active for logic 1 and inactive for 0. The baseband LPF identifies the baseband signal by performing further filtering and acting as a bandlimited channel. The output following this process is depicted below:
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/9_Recov.png)
-
-
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/9_FSK_Recov.png)
 
 Similar to ASK, the final stage involves using a comparator to sharpen transitions and obtain an acceptable copy of the original digital message.
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/10_FSK_Comparator.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/10_Comparator.png)
 
 ## Results Discussion
 
