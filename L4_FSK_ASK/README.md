@@ -11,14 +11,24 @@
 - [Conclusion](#conclusion)
 
 ## Laboratory Objective
+In this experiment, students used the EMONA Telecoms Trainer 101 and lab equipment to generate, detect, and restore digital messages using ASK and FSK schemes. This involved linking several modules with the hardware modulate the message with a carrier and employing signal processing techniques like low pass filters and comparators to clean up the signal. With the available results, a comparison will be made between FSK and ASK in addition to recalling AM and FM from previous experiments.
 
 ## Hardware Requirements
+- EMONA Telecoms Trainer 101
 
 ## Software Requirements
+- Diligent Discovery 2
+- Diligent Waveform Software
 
 ## Useful Resources
+- EMONA Handbook
+- 
+## System Schematics
+The schematics for ASK and FSK are depicted below:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Schematics/ASK_Schematic.png)
 
-## System Schematic
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Schematics/FSK_Schematic.png)
+
 
 ## System Analysis
 
