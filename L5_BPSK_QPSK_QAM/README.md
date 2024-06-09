@@ -26,28 +26,30 @@ The purpose of this laboratory experiment was to analyze, and compare three modu
 
 ## System Schematics
 The schematics for BPSK, QPSK, and QAM are depicted below:
+
+### BPSK Diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/System_Diagrams/BPSK_Diagram.png)
 
-
+### QPSK Diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/System_Diagrams/QPSK_Diagram.png)
 
-
+### QAM Diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/System_Diagrams/QAM_Diagram.png)
 
 ## System Analysis
 
 ### Binary Phase Shift Keying
-The first stage of BPSK involves generating the digital data via an 8 KHz clock, and a sequence generator. This is essentially the same process as FSK, but instead of frequency one uses phase reversals to encode information. The waveform below shows that phase reversal occur on the data stream's logic transitions. Examining the frequency spectrum below the time domain signals shows that the carrier is surpressed which confirms it is a DSBSC signal. This allows it to use its bandwidth more efficiently compared to other schemes.
+The first stage of BPSK involves generating the digital data via an 8 KHz clock, and a sequence generator. This is essentially the same process as FSK, but instead of frequency one uses phase reversals to encode information. The waveform below shows that phase reversals occur on the data stream's logic transitions. Examining the frequency spectrum below the time domain signals shows that the carrier is surpressed which confirms it is a DSBSC signal. This allows it to use its bandwidth more efficiently compared to other schemes.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A1_BPSK_Rev.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A2_Q2.png)
 
-The second stage is also relatively simple as we just multiple by a stolen carrier, and then an LPF. Though, the same issues arises where the recovered signal is not a perfect or near perfect copy of the original. It is not a perfect copy because of timing jitter due to non-ideal synchronization between the signal and LPF. As a resutl we see the signal exceed and cross below the desired logic value before settling. Noise arising from sharp transitions are also a culprit.
+The second stage is also relatively simple as we just multiply by a stolen carrier, and then an LPF. Though, the same issues arises where the recovered signal is not a perfect or near perfect copy of the original. It is not a perfect copy because of timing jitter due to non-ideal synchronization between the signal and LPF. As a result we see the signal exceed and cross below the desired logic value before settling. Noise arising from sharp transitions are also a culprit.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A3_Ripple_Out.png)
 
-Once again we employ a comparator to clean up the signal by comparing it with a VDC value. If one varies the reference voltage, the shape of the output signal changes to meet the new value.
+Once again we employ a comparator to clean up the signal by comparing it with a VDC value. If one varies the reference voltage, the shape of the output signal changes to meet the new value with some distortion.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A4_Comparator.png)
 
-The introduction of noise using the noise modulle and BPF channel allows one to witness BPSK's noise resistanace to a point. Once the noise is larger than the original signal itself, we begin to see errors in logic transitions as seen below.
+The introduction of noise using the noise module and BPF channel allows one to witness BPSK's noise resistanace to a point. Once the noise is as large as the original signal itself, we begin to see errors in logic transitions as seen below.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A5_Noise_0dB.png)
 
 _____________________________________________________________________________________________________________________________________________________________________________
@@ -63,7 +65,7 @@ Before using a comparator, we can use a phase shifter to achieve the closest pos
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B3_Close_X1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B4_Close_Y1.png)
 
-Once again, we employ a comparator to clean up the signal given the undesirable qualities of the previous waveforms. When we first modulate the digital messages, we use a carrier with the same frequency, but 90 degrees apart meaning they are orthogonal. When we demodulate a single QPSK signal, multiplying by the shifted carrier for message 1 will cancel out Message 2, and using the shifted carrier for message 2 on the QPSK signal cancels out the contents of Message 1.
+Once again, we employ a comparator to clean up the signal given the undesirable qualities of the previous waveforms. When we first modulate the digital messages, we use a carrier with the same frequency, but 90 degrees apart meaning they are orthogonal. When we demodulate a single QPSK signal, multiplying by the shifted carrier for message 1 will cancel out message 2, and using the shifted carrier for message 2 on the QPSK signal cancels out the contents of Message 1.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B5_Comp_X1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B6_Comp_X2.png)
 
@@ -75,23 +77,23 @@ QAM bears similaries to QPSK, in that we take in two messages, and combine them 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C1_QAM_QCH.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C2_QAM_ICH.png)
 
-We then add these signals together to obtain a QAM signal with the most siginificant frequency components present at the carrier frequency and 2x the carrier frequency.
+We then add these signals together to obtain a QAM signal with the most siginificant frequency components present at the carrier frequency and 2x the carrier frequency with relevant message frequencies also present.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C3_IQ_Sum.png)
 
-Passing the QPSK signal into an RC LPF, produces a result that may appear to be one of the recovered messages, however looks nothing like either because we are attempting to recover both signals at once. One was able to verify this using headphones to show the audible frequency was neither 1 KHz or 2 KHz. 
+Passing the QPSK signal into an RC LPF, produces a result that may appear to be one of the recovered messages, however looks nothing like either one because we are attempting to recover both signals at once. One was able to verify this using headphones to show the audible frequency was neither 1 KHz or 2 KHz. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C4_Recov_Inc.png)
 
 We can perform a more effective recovery of either message by using the carrier and shifting it appropriately using the phase shifter to remove message 1 or message 2's contents. Ideally, this would completely eliminate the contents. The recovered signal of Message 1 is shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C5_M1_Recov.png)
 
-The hardware is not ideal, very few things are. Examing the frequency spectrum of either message reveals that both messages are not completely rejected when multiplying by the neccessary carrier. For case 1, we see that the message 2 is 28 dB smaller than message 2, and for case 2, message 1 is 27 dB smaller than message 2. Though the attenuation is significant, it is not perfect. This is likely due to the improver phase synchronization due to the precisions of the modules and instruments. For real receiver, this can result in a signal that looks correct, but has incorrect logic transitions, or corrupted data. There would be an increase in the error rate, noise enhancement, and a reduced signal-to-noise ratio.
+The hardware is not ideal, very few things are. Examining the frequency spectrum of either message reveals that both messages are not completely rejected when multiplying by the neccessary carrier. For case 1, we see that the message 2 is 28 dB smaller than message 2, and for case 2, message 1 is 27 dB smaller than message 2. Though the attenuation is significant, it is not perfect. This is likely due to improper phase synchronization due from precision of the modules and instruments. For a real receiver, this can result in a signal that looks correct, but has incorrect logic transitions, or corrupted data. There would be an increase in the error rate, noise enhancement, and a reduced signal-to-noise ratio.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C7_M1_NO_Full_RJ.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C6_M2_NO_Full_RJ.png)
 
 ## Results Discussion
-One similarity across all schemes is the use of DSBSC to improve the efficiency of the techniques. PSK and QPSK deal with digital data while QAM deals with analog data. QPSK and QAM share the use of the quadrature scheme to combine two messages together using two carriers orthogonal to one another and summing them together using an adder. QPSK and PSK are fundamentally the same. Functionally, QPSK encodes two signals while BPSK encodes one. One additionally benefit of QPSK and PSK is their abillity to be convered to FSK and QFSK given a small change in the demodulation scheme. 
+One similarity across all schemes is the use of DSBSC to improve the efficiency of the techniques. PSK and QPSK deal with digital data while QAM deals with analog data. QPSK and QAM share the use of the quadrature scheme to combine two messages together using two carriers orthogonal to one another and summing them together using an adder. QPSK and PSK are fundamentally the same. Functionally, QPSK encodes two signals while BPSK encodes one. One additional benefit of QPSK and PSK is their abillity to be converted to FSK and QFSK given a change in the demodulation scheme. 
 
-In terms of performance, one would see more noise resistance for PSK and QPSK than QAM thus their uses apply differently. QAM would be more useful for lower fidelity systems where noise is not a big factor. PSK and QPSK are more robust against noise, this lends itself to space communication, cellular networks, and RF. Existing broadband infrastructure enlists QAM, and so does software defined radio and direct subscriber lines. This however isn't to say that cannot be used in conjunction with one another depending on the conditions present.
+In terms of performance, one would see more noise resistance for PSK and QPSK than QAM thus their uses apply differently. QAM would be more useful for lower fidelity systems where noise is not a big factor. PSK and QPSK are more robust against noise, this lends itself to space communication, cellular networks, and RF. Existing broadband infrastructure enlists QAM, and so does software defined radio and direct subscriber lines. This however isn't to say that they cannot be used in conjunction with one another depending on the conditions present.
 
 The use of orthogonal signals is not a hard requirement for quadrature systems. One could use carriers 60 degrees apart to modulate 3 messages. However, inter-symbol interference would be more present and the rejection of components would be more difficult. While possible, it would be more suitable to use OFDM with subcarrier to reduce potential cross talk.
 
