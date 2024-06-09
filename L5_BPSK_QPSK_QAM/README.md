@@ -53,16 +53,23 @@ The introduction of noise using the noise modulle and BPF channel allows one to 
 ______________________________________________________________________________________________________________________________________________________________________________
 
 ### Quadrature Phase Shift Keying
-The QPSK scheme is essentially the same as BPSK, but we take in two digital messages instead of one. The intial 8 KHz clock is again fed into the sequence generator, however we employ a 2 bit serial to parallel converter to create a stream of even bits and a stream of odd bits. It may be obvious to think there is a speed advantage given that we are sending two bits at a time as opposed to one, however the advantage is halved/negated when converting back into pairs. The primary reason we use QPSK is it requires half the spectrum of BPSK. This allows for more efficient use of the bandwidth, and frees up room for additional users.
+The QPSK scheme is essentially the same as BPSK, but we take in two digital messages instead of one. The intial 8 KHz clock is again fed into the sequence generator, however we employ a 2 bit serial to parallel converter to create a stream of even bits and a stream of odd bits. It may be obvious to think there is a speed advantage given that we are sending two bits at a time as opposed to one, however the advantage is halved/negated when converting back into pairs. The primary reason we use QPSK is it requires half the spectrum of BPSK. This allows for more efficient use of the bandwidth, and frees up room for additional users. Given that we are still following the BPSK scheme, the signals are also DSBSC. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B1_QPSK_Even_Odd.png)
+
+If one observes the PSK signals coming out of the multipliers which are then fed into an adder one would see a signal sine wave. This of course is due to the adder, and multiplication of respective carrier waves. Demodulating the wave presents the first limitation of the hardware, one is only able to demodulate and observe one PSK signal at a time. Thus, the waveform below is the initial demodulation of Message 1. Naturally, recovered Message 1 is not an exact copy of the original following the filtering stage. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B2_Init_Output.png)
+
+Before using a comparator, we can use a phase shifter to achieve the closest possible results to the original signals. Granted, it is again not a perfect copy, but it has improved. Additionally, students used the phase shifter to observe the effect of the wrong carrier to demodulate which is a wave that is nothing like the original, though it was recoverable. This is likely due to improper phase synchronization as we are not employing a PLL. Additionally, using the phase shifter does not allow for too much precision which will lead to issues.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B3_Close_X1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B4_Close_Y1.png)
+
+Once again, we employ a comparator to clean up the signal given the undesirable qualities of the previous waveforms. When we first modulate the digital messages, we use a carrier with the same frequency, but 90 degrees apart meaning they are orthogonal. When we demodulate a single QPSK signal, multiplying by the shifted carrier for message 1 will cancel out Message 2, and using the shifted carrier for message 2 on the QPSK signal cancels out the contents of Message 1.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B5_Comp_X1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B6_Comp_X2.png)
 
 ______________________________________________________________________________________________________________________________________________________________________________
 
+### Quadrature Amplitude Modulation
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C1_QAM_QCH.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C2_QAM_ICH.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C3_IQ_Sum.png)
