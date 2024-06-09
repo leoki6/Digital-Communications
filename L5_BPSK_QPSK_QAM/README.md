@@ -70,9 +70,15 @@ Once again, we employ a comparator to clean up the signal given the undesirable 
 ______________________________________________________________________________________________________________________________________________________________________________
 
 ### Quadrature Amplitude Modulation
+
+QAM bears similaries to QPSK, in that we take in two messages, and combine them using an adder. However, the messages are now analog rather than digital. We employ the same demodulation scheme for AM. In the first, the two analog messages of 1 KHz and 2 KHz are mutliplied by carriers of 100 KHz orthogonal to one another. Observing its frequency spectrum we once again see a suppresed carrier which indicates a DSBSC. We can also determine that there 3 significant frequency components per multiplier outputs, they are at the intial frequency of Message 1 or 2, the frequency of the carrier, and another at 2x the frequency of the carrier. Below we observe the time domain waveforms and frequency spectrum of I and Q.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C1_QAM_QCH.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C2_QAM_ICH.png)
+
+We then add these signals together to obtain a QAM signal with the most siginificant frequency components present at the carrier frequency and 2x the carrier frequency.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C3_IQ_Sum.png)
+
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C4_Recov_Inc.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C5_M1_Recov.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C7_M1_NO_Full_RJ.png)
