@@ -26,13 +26,17 @@ In this experiment, students used the EMONA Telecoms Trainer 101 and lab equipme
 
 ## System Schematics
 The schematics for ASK and FSK are depicted below:
+
+### ASK Diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/System_Diagrams/ASK_Schematic.png)
 
-
+### FSK Diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/System_Diagrams/FSK_Schematic.png)
 
 
 ## System Analysis
+
+### Amplitude Shift Keying
 The first stage in ASK involves modulating a carrier with a digital message generated from a sequence generator. Initially, the lab has the student use a 2 KHz carrier with a dual analog switch to produce a 'psuedo-ASK' signal. The primary issue with this setup is the use of the the same signal which makes the fundamental and carrier frequency to close to be effective. However, from this waveform one can see that amplitude only varies when the carrier is 'on' representing a logic 1. For logic 0, the ASK signal's voltage is approximately -1.79 V. The time domain waveforms are depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/1_Initial_ASK_Gen.png)
 
@@ -51,6 +55,7 @@ As additional work, introducing noise using the noise module and the adder modul
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/6_Noise_0dB.png)
 ______________________________________________________________________________________________________________________________________________________________________________
+### Frequency Shift Keying
 Shifting to FSK analysis, the general steps are similar, but the encoding of information involves variations in defined frequencies as opposed to amplitude. The first stage involves feeding a 2 KHz signal into the sequence generator and then into the VCO to generate the FSK signal. As shown in the figure below, the frequency changes for logic 1 and again for logic 0. The mark frequency represents a binary 1 and the space frequency represents a binary 0. One can observe that the mark frequency has more cycles than the space though this is not a hard requirement for FSK signals. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/7_FSK_Gen.png)
 
