@@ -35,6 +35,8 @@ The schematics for BPSK, QPSK, and QAM are depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/System_Diagrams/QAM_Diagram.png)
 
 ## System Analysis
+
+### Binary Phase Shift Keying
 The first stage of BPSK involves generating the digital data via an 8 KHz clock, and a sequence generator. This is essentially the same process as FSK, but instead of frequency one uses phase reversals to encode information. The waveform below shows that phase reversal occur on the data stream's logic transitions. Examining the frequency spectrum below the time domain signals shows that the carrier is surpressed which confirms it is a DSBSC signal. This allows it to use its bandwidth more efficiently compared to other schemes.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A1_BPSK_Rev.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A2_Q2.png)
@@ -50,6 +52,8 @@ The introduction of noise using the noise modulle and BPF channel allows one to 
 
 ______________________________________________________________________________________________________________________________________________________________________________
 
+### Quadrature Phase Shift Keying
+The QPSK scheme is essentially the same as BPSK, but we take in two digital messages instead of one. The intial 8 KHz clock is again fed into the sequence generator, however we employ a 2 bit serial to parallel converter to create a stream of even bits and a stream of odd bits. It may be obvious to think there is a speed advantage given that we are sending two bits at a time as opposed to one, however the advantage is halved/negated when converting back into pairs. The primary reason we use QPSK is it requires half the spectrum of BPSK. This allows for more efficient use of the bandwidth, and frees up room for additional users.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B1_QPSK_Even_Odd.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B2_Init_Output.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B3_Close_X1.png)
