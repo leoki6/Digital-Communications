@@ -26,9 +26,9 @@ In this experiment, students used the EMONA Telecoms Trainer 101 and lab equipme
 
 ## System Schematics
 The schematics for ASK and FSK are depicted below:
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Diagrams/ASK_Schematic.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/System_Diagrams/ASK_Schematic.png)
 
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Diagrams/FSK_Schematic.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/System_Diagrams/FSK_Schematic.png)
 
 
 ## System Analysis
