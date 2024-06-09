@@ -50,7 +50,7 @@ Once again we employ a comparator to clean up the signal by comparing it with a 
 The introduction of noise using the noise modulle and BPF channel allows one to witness BPSK's noise resistanace to a point. Once the noise is larger than the original signal itself, we begin to see errors in logic transitions as seen below.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A5_Noise_0dB.png)
 
-______________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________
 
 ### Quadrature Phase Shift Keying
 The QPSK scheme is essentially the same as BPSK, but we take in two digital messages instead of one. The intial 8 KHz clock is again fed into the sequence generator, however we employ a 2 bit serial to parallel converter to create a stream of even bits and a stream of odd bits. It may be obvious to think there is a speed advantage given that we are sending two bits at a time as opposed to one, however the advantage is halved/negated when converting back into pairs. The primary reason we use QPSK is it requires half the spectrum of BPSK. This allows for more efficient use of the bandwidth, and frees up room for additional users. Given that we are still following the BPSK scheme, the signals are also DSBSC. 
@@ -67,7 +67,7 @@ Once again, we employ a comparator to clean up the signal given the undesirable 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B5_Comp_X1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/B6_Comp_X2.png)
 
-______________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________
 
 ### Quadrature Amplitude Modulation
 
@@ -78,19 +78,25 @@ QAM bears similaries to QPSK, in that we take in two messages, and combine them 
 We then add these signals together to obtain a QAM signal with the most siginificant frequency components present at the carrier frequency and 2x the carrier frequency.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C3_IQ_Sum.png)
 
-
+Passing the QPSK signal into an RC LPF, produces a result that may appear to be one of the recovered messages, however looks nothing like either because we are attempting to recover both signals at once. One was able to verify this using headphones to show the audible frequency was neither 1 KHz or 2 KHz. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C4_Recov_Inc.png)
+
+We can perform a more effective recovery of either message by using the carrier and shifting it appropriately using the phase shifter to remove message 1 or message 2's contents. Ideally, this would completely eliminate the contents. The recovered signal of Message 1 is shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C5_M1_Recov.png)
+
+The hardware is not ideal, very few things are. Examing the frequency spectrum of either message reveals that both messages are not completely rejected when multiplying by the neccessary carrier. For case 1, we see that the message 2 is 28 dB smaller than message 2, and for case 2, message 1 is 27 dB smaller than message 2. Though the attenuation is significant, it is not perfect. This is likely due to the improver phase synchronization due to the precisions of the modules and instruments. For real receiver, this can result in a signal that looks correct, but has incorrect logic transitions, or corrupted data. There would be an increase in the error rate, noise enhancement, and a reduced signal-to-noise ratio.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C7_M1_NO_Full_RJ.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/C6_M2_NO_Full_RJ.png)
-## Results Discussion
 
+## Results Discussion
+One similarity across all schemes is the use of DSBSC to improve the efficiency of the techniques. PSK and QPSK deal with digital data while QAM deals with analog data. QPSK and QAM share the use of the quadrature scheme to combine two messages together using two carriers orthogonal to one another and summing them together using an adder. QPSK and PSK are fundamentally the same. Functionally, QPSK encodes two signals while BPSK encodes one. One additionally benefit of QPSK and PSK is their abillity to be convered to FSK and QFSK given a small change in the demodulation scheme. 
+
+In terms of performance, one would see more noise resistance for PSK and QPSK than QAM thus their uses apply differently. QAM would be more useful for lower fidelity systems where noise is not a big factor. PSK and QPSK are more robust against noise, this lends itself to space communication, cellular networks, and RF. Existing broadband infrastructure enlists QAM, and so does software defined radio and direct subscriber lines. This however isn't to say that cannot be used in conjunction with one another depending on the conditions present.
+
+The use of orthogonal signals is not a hard requirement for quadrature systems. One could use carriers 60 degrees apart to modulate 3 messages. However, inter-symbol interference would be more present and the rejection of components would be more difficult. While possible, it would be more suitable to use OFDM with subcarrier to reduce potential cross talk.
 
 ## Additional Experimentation
-
+In the future, it may be worthwhile to perform speed tests depending on the scheme and observe which scheme transmits the fastest and with the least errors. Though from this Lab we can see what characteristics are present, using a microcontroller to construct these systems at a low level can help quantify the time/complexity of each system. Departing from the use of the EMONA hardware, via FGPAs can bring these systems closer to reality, and possibly transmiting to an ESP when expecting a certain type of message can show the performance of each more directly.
 
 ## Conclusion
-
-
-
-5
+In this experiment, students observed the modulation and demodulation of different schemes to observe differences in time domain reconstruction, bandwidth, and complexity. Students were able to compare and constrast traits between schemes to consider some of the design choices and behavior communication engineers take into account. It additionally serves to influence future student projects, and what system may be the most effective for an application. With this strong foundation in more complex systems, we can move forward into charcterizing the quality and error rate of respective schemes.
