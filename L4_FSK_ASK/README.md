@@ -12,7 +12,7 @@
 - [Conclusion](#conclusion)
 
 ## Laboratory Objective
-In this experiment, students used the EMONA Telecoms Trainer 101 and lab equipment to generate, detect, and restore digital messages using ASK and FSK schemes. This involved linking several modules with the hardware modulate the message with a carrier and employing signal processing techniques like low pass filters and comparators to clean up the signal. With the available results, a comparison will be made between FSK and ASK in addition to recalling AM and FM from previous experiments.
+In this experiment, students used the EMONA Telecoms Trainer 101 and lab equipment to generate, detect, and restore digital messages using ASK and FSK schemes. This involved linking several modules with the hardware to modulate the message with a carrier and employing signal processing techniques like low pass filters and comparators to clean up the signal. With the available results, a comparison will be made between FSK and ASK in addition to recalling AM and FM from previous experiments.
 
 ## Hardware Requirements
 - EMONA Telecoms Trainer 101
@@ -42,7 +42,7 @@ To improve this, a VCO is implemented to obtain a carrier of 100 KHz which will 
 Moving forward into the second stage, an envelope detector is effectively built. The ASK signal passes through a rectifier and LPF and is represented on the digital oscilloscope. However, while the demodulation was successful its current state is not a perfect copy of the original. This is due to attenuation, rectifier losses, and delays between modules. The waveform is depecited below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/3_Initial_ASK_Demod.png)
 
-To improve the recovered signal, one can employ a comparator in conjuction with a variable VDC to set the voltage level for the reference. It accomplishes this by comparing voltage values to the reference and comparator quickly switches the output to the relevant logic level. Its characteristics involve high gain, sensitivity to small changes, and hysteresis. The wavefroms are depicted below:
+To improve the recovered signal, one can employ a comparator in conjuction with a variable VDC to set the voltage level for the reference. It accomplishes this by comparing voltage values to the reference input and quickly switches the output to the relevant logic level. Its characteristics involve high gain, sensitivity to small changes, and hysteresis. The wavefroms are depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/4_Comparator.png)
 
 As additional work, introducing noise using the noise module and the adder module shows how the impact of noise can cause errors and make a signal unrecovorable despite looking "correct". The influence of 6 dB and 0 db of noise are shown below:
@@ -66,7 +66,7 @@ The primary difference between ASK and FSK is the parameter they use to encode i
 The most obvious difference between ASK and AM is the levels involved. ASK has a discrete number of levels, while AM has infinite levels relative to its continuous range. FSK and FM have differences analogous to ASK vs AM. The varied frequencies in FSK are discrete, while FM involves keeping track of an acceptable frequency variation relative to the continuous range. 
 
 ## Additional Experimentation
-In the future, it may be worthwhile to highlight the pros and cons of AM, ASK, FM, and FSK by determining cost values for various modules, and noise impact to quantify the system complexity/cost across schemes. Coming up with scenarios where one is preferred over the other, and using data on cost and noise impact can elucidate the decisions communication system designers make.
+In the future, it may be worthwhile to highlight the pros and cons of AM, ASK, FM, and FSK by determining cost values for various modules, and noise impact to quantify the system complexity/cost across schemes. Coming up with scenarios where one is preferred over the other, and using data on cost and noise impact can elucidate the decisions communication system designers make in terms of performance and cost.
 
 ## Conclusion
 In this experiment, students enlisted the use EMONA hardware, and lab equipment to observe the waveforms of ASK and FSK to serve as a comparison between one another, and their analog counter parts. One was able to observe the similar techniques used like rectification, comparators, and LPFs to modulate, demodulate, and clean-up the signal to effectively recover the original message. Additionally, the impact of noise on signal recovery was observed, and why filtering is critical in signal processing for communication systems. As students move forward into more complex schemes, and tools, the foundation built with simpler systems will serve as a point of reference for future work. 
