@@ -2,9 +2,10 @@
 
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
-- [System Schematic](#system-schematic)
 - [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
+- [Useful Resources](#useful-resources)
+- [System Diagrams](#system-diagrams)
 - [System Analysis](#system-analysis)
 - [Results](#results)
 - [Additional Experimentation](#additional-experimentation)
@@ -22,12 +23,12 @@ In this experiment, students used the EMONA Telecoms Trainer 101 and lab equipme
 
 ## Useful Resources
 - EMONA Handbook
-- 
+
 ## System Schematics
 The schematics for ASK and FSK are depicted below:
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Schematics/ASK_Schematic.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Diagrams/ASK_Schematic.png)
 
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Schematics/FSK_Schematic.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L3_FSK_ASK/System_Diagrams/FSK_Schematic.png)
 
 
 ## System Analysis
