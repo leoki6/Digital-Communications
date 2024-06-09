@@ -35,10 +35,17 @@ The schematics for BPSK, QPSK, and QAM are depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/System_Diagrams/QAM_Diagram.png)
 
 ## System Analysis
+The first stage of BPSK involves generating the digital data via an 8 KHz clock, and a sequence generator. This is essentially the same process as FSK, but instead of frequency one uses phase reversals to encode information. The waveform below shows that phase reversal occur on the data stream's logic transitions. Examining the frequency spectrum below the time domain signals shows that the carrier is surpressed which confirms it is a DSBSC signal. This allows it to use its bandwidth more efficiently compared to other schemes.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A1_BPSK_Rev.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A2_Q2.png)
+
+The second stage is also relatively simple as we just multiple by a stolen carrier, and then an LPF. Though, the same issues arises where the recovered signal is not a perfect or near perfect copy of the original. It is not a perfect copy because of timing jitter due to non-ideal synchronization between the signal and LPF. As a resutl we see the signal exceed and cross below the desired logic value before settling. Noise arising from sharp transitions are also a culprit.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A3_Ripple_Out.png)
+
+Once again we employ a comparator to clean up the signal by comparing it with a VDC value. If one varies the reference voltage, the shape of the output signal changes to meet the new value.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A4_Comparator.png)
+
+The introduction of noise using the noise modulle and BPF channel allows one to witness BPSK's noise resistanace to a point. Once the noise is larger than the original signal itself, we begin to see errors in logic transitions as seen below.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L5_BPSK_QPSK_QAM/Figures/A5_Noise_0dB.png)
 
 ______________________________________________________________________________________________________________________________________________________________________________
