@@ -57,14 +57,19 @@ Shifting to FSK analysis, the general steps are similar, but the encoding of inf
 The second stage involves demodulating the FSK signal using the same techniques as ASK which is a low pass filter, envelope detector, and baseband LPF channel. The initial filter removes the mark frequency as it is higher. This leaves the space frequency intact and active for logic 1 and inactive for 0. The baseband LPF identifies the baseband signal by performing further filtering and acting as a bandlimited channel. The output following this process is depicted below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/9_FSK_Recov.png)
 
-Similar to ASK, the final stage involves using a comparator to sharpen transitions and obtain an acceptable copy of the original digital message.
+Similar to ASK, the final stage involves using a comparator to sharpen transitions and obtain an acceptable copy of the original digital message. The difference being a small time delay between input and output signals.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L4_FSK_ASK/Figures/10_Comparator.png)
 
 ## Results Discussion
+The primary difference between ASK and FSK is the parameter they use to encode information, amplitude or frequency respectively. ASK is simpler to implement, but has lower noise resistance. It is more cost effective so to speak, at the cost of lower fidelity. FSK is more complex to implement, but it is much more robust against noise, and even when the recovered values are very low, it is still possible to recover the signal via comparator. However, they do share the same goal which is to encode digital information as opposed to analog.
+
+The most obvious difference between ASK and AM is the levels involved. ASK has a discrete number of levels, while AM has infinite levels relative to its continuous range. FSK and FM have differences analogous to ASK vs AM. The varied frequencies in FSK are discrete, while FM involves keeping track of an acceptable frequency variation relative to the continuous range. 
 
 ## Additional Experimentation
+In the future, it may be worthwhile to highlight the pros and cons of AM, ASK, FM, and FSK by determining cost values for various modules, and noise impact to quantify the system complexity/cost across schemes. Coming up with scenarios where one is preferred over the other, and using data on cost and noise impact can elucidate the decisions communication system designers make.
 
 ## Conclusion
+In this experiment, students enlisted the use EMONA hardware, and lab equipment to observe the waveforms of ASK and FSK to serve as a comparison between one another, and their analog counter parts. One was able to observe the similar techniques used like rectification, comparators, and LPFs to modulate, demodulate, and clean-up the signal to effectively recover the original message. Additionally, the impact of noise on signal recovery was observed, and why filtering is critical in signal processing for communication systems. As students move forward into more complex schemes, and tools, the foundation built with simpler systems will serve as a point of reference for future work. 
 
 
 
