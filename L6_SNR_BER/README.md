@@ -74,6 +74,8 @@ Before moving forward into BER, it is first important to characterize the baseba
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B3_BBLPF_Char.png)
 
 We can collect the respective values into the table below to get a comprehensive view of the baseband LPF:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T3.png)
+
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B4_Line_Code_Noise.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B5_Line_Code_Repeat.png)
