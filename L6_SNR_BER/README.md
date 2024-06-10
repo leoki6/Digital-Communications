@@ -1,4 +1,4 @@
-# Lab 6 - 
+# Lab 6 - SNR and BER
 
 ## Table of Contents
 - [Laboratory Objective](#laboratory-objective)
