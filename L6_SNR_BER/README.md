@@ -49,15 +49,32 @@ Next, we connect the result of the adder to a baseband LPF channel to show how t
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A3_BL_0dB.png)
 
 We can begin to quantify the signal to noise ratio, by removing the noise and measuring the RMS voltage of the signal we can grab our first value to calculate the ratio. Following, we can then remove the signal itself and measure the RMS of the noise. We can then use: 20log(Vs/Vn) or alternatively SNR = (S + N)/N. The alternative form is useful for in the "field" as the level of noise is not pre-determined. The table below indicates calculated SNR.
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T1.png)
+
+The ratio tells us the amount of the signal present to the noise. Thus, a high ratio indicates the signal is more dominant over the noise. The alternative calculation method yields a similar value because at 20 dB of noise, there isn't much of change to the numerator. Higher values of noise will result in differing values as shown in the table below for 0dB:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T2.png)
+
+We can now use eye diagrams to have a more visual representation of the effects of noise on a signal. As shown below, the openings of the eye diagram and clear and show clear transitions in logic. Again, 20 dB is only a fraction of the signal size thus the eye diagram is easy to read.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A4_Eye_20dB.png)
+
+Increasing the noise caueses the eye, and we see more timing jitter smearing the diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A5_Eye_6dB.png)
+
+Bumping up to 0 dB we see complete occlusion of the eye making it impossible to decipher. One can also determine that the bit rate of the clock has an impact on the eye diagram as well. The higher the rate, the more closed the eye is, and there less and less time between logic transitions.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A6_Eye_0dB.png)
+
+Using the frequency adjust of the VCO we can validate the relationship between the rate of the CLK, and the eye diagram. Adjusting the VCO to a rate of about 3.5 KHz allows one to see about 5 eyes in the diagram. Pushing past this worsens the diagram.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A7_Measurements.png)
 
 ### Bit Error Rate
+
+Before moving forward into BER, it is first important to characterize the baseband LPF by increasing the frequency. The waveforms below are two examples of this:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B1_BBLPF_Char.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B2_BBLPF_Char.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B3_BBLPF_Char.png)
+
+We can collect the respective values into the table below to get a comprehensive view of the baseband LPF:
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B4_Line_Code_Noise.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B5_Line_Code_Repeat.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B6_FFT_Line_Noise.png)
