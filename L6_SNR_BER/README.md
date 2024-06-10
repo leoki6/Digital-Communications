@@ -75,7 +75,7 @@ Before moving forward into BER, it is first important to characterize the baseba
 
 We can collect the respective values into the table below to get a comprehensive view of the baseband LPF:
 
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T3.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T3_1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/G1_Best_Fit.png)
 
 Now, we will introduce noise into the system. The line code below is displayed alongside the pre-attenuated noise:
@@ -86,6 +86,9 @@ Examining the line code more closely, one can observe that the line code reapeat
 
 Examining the FFT of the noise and signal, and adjusting its bandwidth via the frequency knob of the LPf to 3.5 KHz, we can measure the SNR again using RMS voltage values.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B6_FFT_Line_Noise.png)
+
+For these values, we get a gain of 
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B7_Measurements.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B8_3dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B9_Noise_Adder_Removed.png)
