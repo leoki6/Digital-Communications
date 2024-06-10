@@ -49,9 +49,13 @@ Next, we connect the result of the adder to a baseband LPF channel to show how t
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A3_BL_0dB.png)
 
 We can begin to quantify the signal to noise ratio, by removing the noise and measuring the RMS voltage of the signal we can grab our first value to calculate the ratio. Following, we can then remove the signal itself and measure the RMS of the noise. We can then use: 20log(Vs/Vn) or alternatively SNR = (S + N)/N. The alternative form is useful for in the "field" as the level of noise is not pre-determined. The table below indicates calculated SNR.
+
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T1.png)
 
 The ratio tells us the amount of the signal present to the noise. Thus, a high ratio indicates the signal is more dominant over the noise. The alternative calculation method yields a similar value because at 20 dB of noise, there isn't much of change to the numerator. Higher values of noise will result in differing values as shown in the table below for 0dB:
+
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T2.png)
 
 We can now use eye diagrams to have a more visual representation of the effects of noise on a signal. As shown below, the openings of the eye diagram and clear and show clear transitions in logic. Again, 20 dB is only a fraction of the signal size thus the eye diagram is easy to read.
