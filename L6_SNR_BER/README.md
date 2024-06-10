@@ -87,10 +87,13 @@ Examining the line code more closely, one can observe that the line code reapeat
 Examining the FFT of the noise and signal, and adjusting its bandwidth via the frequency knob of the LPf to 3.5 KHz, we can measure the SNR again using RMS voltage values.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B6_FFT_Line_Noise.png)
 
-For these values, we get a gain of 
+For these values, the SNR is calculated below:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T5.png)
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B7_Measurements.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B8_3dB.png)
+
+Moving forward, we'll observe the input and output of the baseband LPF, and remove the noise. We can see that the message is still distorted due to the LPF's effects 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B9_Noise_Adder_Removed.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C1_5K_Measurement.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C1_5K_TD.png)
