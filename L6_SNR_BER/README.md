@@ -39,7 +39,7 @@ The purpose of this experiment is to explore the benchmarks associated with quan
 ## System Analysis
 
 ### Signal-to-Noise Ratio
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A1_20dB.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A1_20db.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A2_6dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A2_BL_20dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A3_BL_0dB.png)
@@ -52,7 +52,7 @@ The purpose of this experiment is to explore the benchmarks associated with quan
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B1_BBLPF_Char.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B2_BBLPF_Char.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B3_BBLPF_Char.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B4_Line_Noise.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B4_Line_Code_Noise.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B5_Line_Code_Repeat.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B6_FFT_Line_Noise.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B7_Measurements.png)
