@@ -102,6 +102,9 @@ By using the align knob the bit error counter we can align the decision points t
 To reduce the number of errors below 10, we will steadily decrease the gain of the noise and keep track of relevant values in the table below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T5.png)
 
+Finally, we'll obtain best fit measurements for discussion:
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/G5_Best_Fit.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/G6_Best_Fit.png)
 
 ## Results Discussion
 
