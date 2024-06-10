@@ -92,10 +92,15 @@ Moving forward, we'll observe the input and output of the baseband LPF, and remo
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B9_Noise_Adder_Removed.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C2_Measurements.png)
 
-
+We can now implentent the Bit Error Counter. We can observe the time domain signal of the output compared to the line code, and note that it doesn't look quite right. There are decision points superimposed on the input. We can also visualize them on an intitial eye diagram.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C3_TD_Issue.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C4_Init_Eye.png)
+
+By using the align knob the bit error counter we can align the decision points to widest part of the eye. This is known as bit synchronization. Despite this correction, the error counter stills counts around 1700 errors consistently. This due to both the bandwidth and noise for the system
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C5_Corrected_Eye.png)
+
+To reduce the number of errors below 10, we will steadily decrease the gain of the noise and keep track of relevant values in the table below:
+
 
 ## Results Discussion
 
