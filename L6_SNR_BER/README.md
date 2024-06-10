@@ -39,10 +39,16 @@ The purpose of this experiment is to explore the benchmarks associated with quan
 ## System Analysis
 
 ### Signal-to-Noise Ratio
+
+The first stage of the SNR schematic involves getting a feel for the noise levels being added to the signal. As depicted below using an adder to combine noise with the output of the sequence generator impacts the signal depending on the noise level. 20 dB of noise has a much smaller impact compared to 6 dB and 0 dB. 20 dB is a fraction of the signal while 0 dB is nearly the size of the signal itself thus one can observe more noise. The noise generated here additive white gaussian noise where its power is distributed evenly in its spectrum
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A1_20db.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A2_6dB.png)
+
+Next, we connect the result of the adder to a baseband LPF channel to show how there isn't an unlimited bandwidth in real communications. We can see a reduction of the noise in the waveforms below because the baseband LPF performs filtering. It only accepts a certain range of frequencies given the nature of the channel
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A2_BL_20dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A3_BL_0dB.png)
+
+We can begin to quantify the signal to noise ratio, by removing the noise and measuring the RMS voltage of the signal we can grab our first value to calculate the ratio. Following, we can then remove the signal itself and measure the RMS of the noise. We can then use: 20log(Vs/Vn) or alternatively SNR = (S + N)/N. The alternative form is useful for in the "field" as the level of noise is not pre-determined. The table below indicates calculated SNR.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A4_Eye_20dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A5_Eye_6dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A6_Eye_0dB.png)
