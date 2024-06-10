@@ -74,7 +74,6 @@ Before moving forward into BER, it is first important to characterize the baseba
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B3_BBLPF_Char.png)
 
 We can collect the respective values into the table below to get a comprehensive view of the baseband LPF:
-
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T3_1.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/G1_Best_Fit.png)
 
@@ -84,20 +83,16 @@ Now, we will introduce noise into the system. The line code below is displayed a
 Examining the line code more closely, one can observe that the line code reapeats itself every 31 bits. It has an approximate duration of 15 ms. According to the manual, the master signals module outputs a message at 2.083 KHz. Given that there are 31 bits, inverting the duration and multiplying by the number of bits gives approximately 2 KHz. One can notice that the line code hoves around 70 mVDC, this is due to a bit imbalance where there are more high bits than low bits.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B5_Line_Code_Repeat.png)
 
-Examining the FFT of the noise and signal, and adjusting its bandwidth via the frequency knob of the LPf to 3.5 KHz, we can measure the SNR again using RMS voltage values.
+Examining the FFT of the noise and signal, and adjusting its bandwidth via the frequency knob of the LPF to 3.5 KHz and identifying the 3db point, we can measure the SNR again using RMS voltage values.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B6_FFT_Line_Noise.png)
-
-For these values, the SNR is calculated below:
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T5.png)
-
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B7_Measurements.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B8_3dB.png)
 
-Moving forward, we'll observe the input and output of the baseband LPF, and remove the noise. We can see that the message is still distorted due to the LPF's effects 
+Moving forward, we'll observe the input and output of the baseband LPF, and remove the noise. We can see that the message is still distorted due to the LPF's effects. As noted in the frequency plot, at approximately 3.5 KHz we see significant attenuation otherwise known as the 3 dB point. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B9_Noise_Adder_Removed.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C1_5K_Measurement.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C1_5K_TD.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C2_Measurements.png)
+
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C3_TD_Issue.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C4_Init_Eye.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/C5_Corrected_Eye.png)
