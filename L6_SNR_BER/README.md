@@ -74,11 +74,17 @@ Before moving forward into BER, it is first important to characterize the baseba
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B3_BBLPF_Char.png)
 
 We can collect the respective values into the table below to get a comprehensive view of the baseband LPF:
+
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/T3.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/G1_Best_Fit.png)
 
-
+Now, we will introduce noise into the system. The line code below is displayed alongside the pre-attenuated noise:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B4_Line_Code_Noise.png)
+
+Examining the line code more closely, one can observe that the line code reapeats itself every 31 bits. It has an approximate duration of 15 ms. According to the manual, the master signals module outputs a message at 2.083 KHz. Given that there are 31 bits, inverting the duration and multiplying by the number of bits gives approximately 2 KHz. One can notice that the line code hoves around 70 mVDC, this is due to a bit imbalance where there are more high bits than low bits.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B5_Line_Code_Repeat.png)
+
+Examining the FFT of the noise and signal, and adjusting its bandwidth via the frequency knob of the LPf to 3.5 KHz, we can measure the SNR again using RMS voltage values.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B6_FFT_Line_Noise.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B7_Measurements.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B8_3dB.png)
