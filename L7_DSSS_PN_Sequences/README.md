@@ -36,15 +36,14 @@ This laboratory involves a variation of the DSBSC modulation scheme called Direc
 
 ### DSSS
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
-![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A2_Speech_Mod.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A3_Modulation.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A4_F_Adjust.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A4_G_F_Adjust.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A5_VCO_Sweep.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A6_20dB.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A7_6dB.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A8_0dB.png)
 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B1_SYNC_X.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B2_Freq_Nulls.png)
