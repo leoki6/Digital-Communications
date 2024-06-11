@@ -35,16 +35,31 @@ This laboratory involves a variation of the DSBSC modulation scheme called Direc
 ## System Analysis
 
 ### DSSS
+
+The first stage of DSSS involves multiplying a 2 KHz message with the output of the sequence generator using a 100 KHz CLK. The output of the sequence generator represents the PN Sequence, and the output of the multiplier is the DSSS Signal. We'll see here the signal is large and clear, when we expect it to be indistinguishable from noise. This is likely due to the bandwidth limitations of the multiplier which is around 600 KHz and the k factor which is in respect to the output thus increasing the size of the signal
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+
+Alternatively, we can feed a speech signal in addition to the line code, to observe real time speech modulation. We'll notice here that there is no signal when there is no speech occurring. This is likely due to the nature of PN sequences where if there is very little signal, the result of the mulitiplication will be minimal. There may also be an activation thershold that is not meant.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A2_Speech_Mod.png)
+
+We can an get more of an active modulation by speaking as shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A3_Modulation.png)
+
+To demodulate the signal we build a typical product detector which involves multiplying by the stolen PN sequence, and passing it through a filter. More interestingly, we can introduce a VCO to begin to jam the signal. By tuning the frequency and gain knobs of the adder where the DSSS signal and VCO interact we observe impacts to the signal, but we'll notice that these adjusts don't seem to impact the demodulated output much.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A4_F_Adjust.png)
+
+Again, we don't see much of an impact even increasing the gain of the VCO. This is due to the PN sequence spreading the signal over a wide-frequency band. Thus, targetting only a specific frequency even with an increase in gain is not effective.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A4_G_F_Adjust.png)
+
+We can perform a more robust form of jamming by sweeping the DSSS signal with a range of frequencies. Even the distortion as a result is still minimal.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A5_VCO_Sweep.png)
+
+We can go even further by introducing noise to achieve a broadband form of jamming using varying noise sizes. Again, we'll notice that even peforming this even larger sweep using growing noises sizes the output is still minimally affected. The strength of DSSS is shown very clearly in the figures below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A6_20dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A7_6dB.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A8_0dB.png)
 
+### PN Sequences
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B1_SYNC_X.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B2_Freq_Nulls.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B3_Psuedo_Noise.png)
