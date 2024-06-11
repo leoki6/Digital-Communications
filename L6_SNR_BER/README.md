@@ -40,7 +40,7 @@ The purpose of this experiment is to explore the benchmarks associated with quan
 
 ### Signal-to-Noise Ratio
 
-The first stage of the SNR schematic involves getting a feel for the noise levels being added to the signal. As depicted below using an adder to combine noise with the output of the sequence generator impacts the signal depending on the noise level. 20 dB of noise has a much smaller impact compared to 6 dB and 0 dB. 20 dB is a fraction of the signal while 0 dB is nearly the size of the signal itself thus one can observe more noise. The noise generated here additive white gaussian noise where its power is distributed evenly in its spectrum
+The first stage of the SNR schematic involves getting a feel for the noise levels being added to the signal. As depicted below, using an adder to combine noise with the output of the sequence generator impacts the signal depending on the noise level. 20 dB of noise has a much smaller impact compared to 6 dB and 0 dB. 20 dB is a fraction of the signal while 0 dB is nearly the size of the signal itself thus one can observe more noise. The noise generated here is additive white gaussian noise where its power is distributed evenly in its spectrum
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A1_20db.png)
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A2_6dB.png)
 
@@ -61,10 +61,10 @@ The ratio tells us the amount of the signal present to the noise. Thus, a high r
 We can now use eye diagrams to have a more visual representation of the effects of noise on a signal. As shown below, the openings of the eye diagram and clear and show clear transitions in logic. Again, 20 dB is only a fraction of the signal size thus the eye diagram is easy to read.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A4_Eye_20dB.png)
 
-Increasing the noise caueses the eye, and we see more timing jitter smearing the diagram
+Increasing the noise closes the eye, and we see more timing jitter smearing the diagram
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A5_Eye_6dB.png)
 
-Bumping up to 0 dB we see complete occlusion of the eye making it impossible to decipher. One can also determine that the bit rate of the clock has an impact on the eye diagram as well. The higher the rate, the more closed the eye is, and there less and less time between logic transitions.
+Bumping up to 0 dB we see complete occlusion of the eye making it impossible to decipher. One can also determine that the bit rate of the clock has an impact on the eye diagram as well. The higher the rate, the more closed the eye is, and there is less and less time between logic transitions.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/A6_Eye_0dB.png)
 
 Using the frequency adjust of the VCO we can validate the relationship between the rate of the CLK, and the eye diagram. Adjusting the VCO to a rate of about 3.5 KHz allows one to see about 5 eyes in the diagram. Pushing past this worsens the diagram.
@@ -84,7 +84,7 @@ We can collect the respective values into the table below to get a comprehensive
 Now, we will introduce noise into the system. The line code below is displayed alongside the pre-attenuated noise:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B4_Line_Code_Noise.png)
 
-Examining the line code more closely, one can observe that the line code reapeats itself every 31 bits. It has an approximate duration of 15 ms. According to the manual, the master signals module outputs a message at 2.083 KHz. Given that there are 31 bits, inverting the duration and multiplying by the number of bits gives approximately 2 KHz. One can notice that the line code hoves around 70 mVDC, this is due to a bit imbalance where there are more high bits than low bits.
+Examining the line code more closely, one can observe that the line code reapeats itself every 31 bits. It has an approximate duration of 15 ms. According to the manual, the master signals module outputs a message at 2.083 KHz. Given that there are 31 bits, inverting the duration and multiplying by the number of bits gives approximately 2 KHz. One can notice that the line code hovers around 70 mVDC, this is due to a bit imbalance where there are more high bits than low bits.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/B5_Line_Code_Repeat.png)
 
 Examining the FFT of the noise and signal, and adjusting its bandwidth via the frequency knob of the LPF to 3.5 KHz and identifying the 3db point, we can measure the SNR again using RMS voltage values.
@@ -111,11 +111,14 @@ Finally, we'll obtain best fit measurements for discussion:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L6_SNR_BER/Figures/G6_Best_Fit.png)
 
 ## Results Discussion
+Comparing the best fit measurements before and after adjusting the decision points is difficult to compare, however one can see that aligning the decision points we can reach higher SNR values. Though the graphs say gain, they are for SNR vs Output Voltage or SNR vs Frequency which applies to the same values for the output voltage. Using SNR and BER metrics allow one to see how improving one tends to improve the other. As we improved the SNR by reducing the gain of the noise we were able to note that the error rate and average error count reduced considerably. Though there isn't a direct link per se but the impact of noise on these two measurements is apparent. 
 
+Another point of interest is adjusting the cutoff of the LPF to attenuate frequencies beyond those of our messages. We were able to achieve this by using the real-time FFT to adjust the cutoff visually. This achieves better peformance by filtering out the carrier, and not filtering out the messages. We were able to notice this when distorted time domain signals improved. Additionally, the inclusion of the line code detector allows us to pick out specific bits for presentation using the same stolen clock. This highlights the importance of deciding on system characteristics prior to building. 
 
 ## Additional Experimentation
-
+In the future, it is worthwhile to choose a modulation scheme like BPSK and or QAM and use these measurements to observe BER and SNR as noise is introduced. To expand this, we can perform this on different schemes of the same type to have more concrete comparisons. Graphing these values as well can create a visual representation to observe noise resistance even among more robust schemes.
 
 ## Conclusion
+In this experiment, students gained a hands-on understanding of common evaluation metrics. This places an added layer of complexity, but helps understand the impact of noise more directly rather than observe the time domain waveforms and see them distort. Students were able to identify ideal SNR and BER values, and gauge what a real life metric would entail. Given the foundation in modulation schemes, and the understanding in evaluation criteria we can move forward into more complex tools and analyzing them as well.
 
 
