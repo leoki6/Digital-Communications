@@ -34,6 +34,24 @@ This laboratory involves a variation of the DSBSC modulation scheme called Direc
 
 ## System Analysis
 
+### DSSS
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A1_DSSS_Sig.png)
+
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B1_SYNC_X.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B2_Freq_Nulls.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B3_Psuedo_Noise.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B4_X_Lobes.png)
+
+
 ## Results Discussion
 
 
