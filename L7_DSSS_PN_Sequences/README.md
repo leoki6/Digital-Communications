@@ -45,7 +45,7 @@ Alternatively, we can feed a speech signal in addition to the line code, to obse
 We can an get more of an active modulation by speaking as shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A3_Modulation.png)
 
-To demodulate the signal we build a typical product detector which involves multiplying by the stolen PN sequence, and passing it through a filter. More interestingly, we can introduce a VCO to begin to jam the signal. By tuning the frequency and gain knobs of the adder where the DSSS signal and VCO interact we observe impacts to the signal, but we'll notice that these adjusts don't seem to impact the demodulated output much.
+To demodulate the signal we build a typical product detector which involves multiplying by the stolen PN sequence, and passing it through a filter. More interestingly, we can introduce a VCO to begin to jam the signal. By tuning the frequency and gain knobs of the adder where the DSSS signal and VCO interact we observe impacts to the signal, but we'll notice that these adjustments don't seem to impact the demodulated output much.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A4_F_Adjust.png)
 
 Again, we don't see much of an impact even increasing the gain of the VCO. This is due to the PN sequence spreading the signal over a wide-frequency band. Thus, targetting only a specific frequency even with an increase in gain is not effective.
@@ -60,18 +60,31 @@ We can go even further by introducing noise to achieve a broadband form of jammi
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/A8_0dB.png)
 
 ### PN Sequences
+
+To expand on our work with DSSS, we'll take a deeper dive into PN sequences. We'll start by examining the SYNC output of the sequence generator and its X code. We'll note here that the pulse of sync output lines up with the start of the X sequence. We can calculate the width of of one of bit by using the oscilloscope to find the period of the X sequence and then dividing by 31 bits. This results in a width of 477.4 microseconds for one bit. The pulse for the SYNC Pulse is 14.80 ms using the oscilloscope. There is a small difference between the period of the sync and the duration of the sequence. This is likely due to the initial pulse time, and the X sequences response to it. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B1_SYNC_X.png)
+
+Moving forward, we'll observe the FFT of the PN Sequence to find its frequency nulls. These are about 2 KHz, 4 KHz, 6 KHz, and 8 KHz. However, we can see more lobes than initially predicted. This is due to the bandwidth of the system we are not passing it through any filter which allows it to go beyond what was expected. Theoreticlly, there would be an infinite amount of harmonics making up each lobe.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B2_Freq_Nulls.png)
+
+We can take the output of the PN sequence and observe the 'psuedo-noise' generated to gain an understanding of what is being multiplied into the message. The period of the noise is about 76 microseconds. Passing this through an LPF we'll see a much smoother signal beacuse even though it appears as noise because it is still a pulse train made up of sinusoids. We'll see repetitive smooth signal here.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B3_Psuedo_Noise.png)
+
+We can notice here that despite X and Y having different lengths of 31 bits and 255 the spectra have the same number of lobes. This is primiarly due to the spreading factor of the PN sequence and its bandwidth. The autocorrelation of PN sequences is also strong thus the spread takes dominance. 
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/L7_DSSS_PN_Sequences/Figures/B4_X_Lobes.png)
 
 
 ## Results Discussion
 
+The use of DSSS shows its strength of its scheme by being highly resistant to jamming. Additionally, it is also a DSBSC signal thus it makes use of its spectrum efficiently. The difference from typical DSBSC comes from the use of a pulse train rather than a sinewave. As we've observed in figures above, increase the jamming signal's gain, frequency, and frequency still allows the demodulated signal to be recovered with minimal effect. This in turn is due to the use of PN sequences. Observing the spectrum of the PN sequences we are able to observe that isn't true noise as it is still used as a carrier, but with increasing lengths of PN sequences it becomes harder and harder to jam which shows its applications in secure communications and so on.
+
+We can also observe the spread factor of the PN Sequence as it encodes information across a wideband even in a bandlimited channel. Passing it through an LPF reveals its nature as a theoretically infinite combination of sinusoids. We can even call it a psuedo-random sequence. Despite not being truly random you'll need the exact sequence to jam the signal or reveal its contents which is difficult considering modern PN sequences. The power of the DSSS signal can be redistributed to the orignal baseband.
+
 
 ## Additional Experimentation
-
+For future work, we can apply SNR and BER calculations to the DSSS signal to observe its performance metrics. Though, we'd expect low values given the robust nature of PN Sequences. We can look for a point where the jamming signal or added channel noise is too strong to make the signal recoverable. This could end up being quite a challenge. Alternatively, we can investigate the use of alternative carrier besides sine and pulse trains and observe the effect and whether recovery is feasible.
 
 ## Conclusion
+In this experiment, students observed the robustness of the DSSS scheme in conjunction with PN sequences to reject jamming signals while still being recoverable. We were able to observe the spread of power as modulation occurs due to the wideband and pulse train of the carrier. One was also able to idenitify the psuedo-noise properties of PN sequences which makes them predictable, but when using longer and longer sequences becomes difficult to brute force even with more comprehensive jamming techniques. The main properties of DSSS and PN sequences lends itself well to ensuring clear communication in noisy environments or where jamming is present like in a millitary setting. 
 
 
