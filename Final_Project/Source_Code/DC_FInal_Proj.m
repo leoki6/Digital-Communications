@@ -32,6 +32,23 @@ qam_order = 256;
 qamModulator = qammod(leftChannelQuantized, qam_order, 'UnitAveragePower', true, 'InputType', 'integer');
 scatterplot(qamModulator)
 
+% Pad the signal for FFT
+nextPow2 = 2^nextpow2(length(qamModulator));
+paddedQAMSignal = [qamModulator; zeros(nextPow2 - length(qamModulator), 1)];
+
+% Call the custom FFT function
+fourier_coeffs = custom_fft(paddedQAMSignal);
+
+% Compute the magnitude spectrum
+magnitude_spectrum = abs(fourier_coeffs);
+
+% Plot the magnitude spectrum
+figure;
+plot(linspace(0, FS/2, nextPow2/2), magnitude_spectrum(1:nextPow2/2));
+title('Magnitude Spectrum of the QAM Signal');
+xlabel('Frequency (Hz)');
+ylabel('Magnitude');
+
 % Define a carrier frequency
 carrierFrequency = 10000; % Hz
 
@@ -79,7 +96,7 @@ magnitude_spectrum2 = abs(fourier_coeffs_demod);
 
 % Plot the magnitude spectrum
 figure;
-plot(linspace(0, FS/2, nextPow2/2), magnitude_spectrum(1:nextPow2/2));
+plot(linspace(0, FS/2, nextPow2/2), magnitude_spectrum2(1:nextPow2/2));
 title('Magnitude Spectrum of the Deodulated Signal without Filtering');
 xlabel('Frequency (Hz)');
 ylabel('Magnitude');
@@ -108,9 +125,9 @@ ylabel('Magnitude');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Demodulate the QAM signal
-demodulated_ints = qamdemod(filteredSignal, qam_order, 'UnitAveragePower', true, 'OutputType', 'integer');
+demodulated_ints = qamdemod(demodulatedSignal, qam_order, 'UnitAveragePower', true, 'OutputType', 'integer');
 
-% Convert the demodulated integers to a signal if needed
+% Convert the demodulated integers
 demodulated_signal = double(demodulated_ints);
 
 % Convert the quantized signal back to the normalized range [0, 1]
