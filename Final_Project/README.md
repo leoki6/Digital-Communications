@@ -11,7 +11,7 @@
 - [Conclusion](#conclusion)
 
 ## Project Objective
-In this project, the purpose was to encode, modulate, and demodulate a FLAC file using the QAM-256 scheme. This serves to encapsulate some of the processes and tools during the duration of the Digital Communications. We'll observe the encoding of information and the use of carriers to transmite information reliably. This also includes quantizing and restoring the quantized information for comparison with the original. We'll note the robustness of QAM and its ability to retain high fidelity information, and what the parameters necessary to meet that are.
+In this project, the purpose was to encode, modulate, and demodulate a FLAC file using the QAM-256 scheme. This serves to encapsulate some of the processes and tools during the duration of the Digital Communications. We'll observe the encoding of information and the use of carriers to transmit information reliably. This also includes quantizing and restoring the quantized information for comparison with the original. We'll note the robustness of QAM and its ability to retain high fidelity information, and what the parameters necessary to meet that are.
 
 ## Software Requirements
 - MATLAB R2022b
@@ -29,7 +29,7 @@ In this project, the purpose was to encode, modulate, and demodulate a FLAC file
 The first stage of the system involves reading in a FLAC file, and isolating one channel for analysis. Before moving into further analysis, its important we establish the initial time domain and frequency spectrum of the signal.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/LEFT_RIGHT_CHANNELS.png)
 
-The frequency spectrum of spectrum for double sided and single side is shown below:
+The frequency spectrum of for double sided and single sided is shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/LEFT_RIGHT_LIN_SPECTRUM.png)
 
 We can notice that there is a lot of content contained in this file which means we have a lot of data we can lose. Fortunately we are using FLAC files which are high fidelity, and QAM which is a robust scheme
@@ -39,7 +39,7 @@ We can notice that there is a lot of content contained in this file which means 
 To utilize the QAMMOD, we need to quantize the FLAC file for processing. For QAM256 this involves quantizing for 255 levels. This involves scaling the signal by 255 and rounding to the nearest integer. We can pass this to QAMMOD in MATLAB and produce a constellation plot:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/CONST_PLOT.png)
 
-It's important to notice that is an ideal constellation because there are no noisy conditions.
+It's important to notice that this is an ideal constellation because there are no noisy conditions.
 
 Furthermore, we can also look at the spectrum from this modulation as shown below:
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/QAM_SPECTRUM.png)
@@ -49,12 +49,12 @@ Moving forward, we can multiply the result of the QAM modulation by 100 KHz comp
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/MOD_Spectrum.png)
 
 ### Carrier Demodulation
-To demodulate carrier, it is as simple as multiplying by the complex carrier. This prepares the data to be processed in QAMDEMOD. 
+To demodulate the carrier, it is as simple as multiplying by the conjugate of the complex carrier. This prepares the data to be processed in QAMDEMOD. 
 
 ### QAM Demodulation and Recovery
 To demodulate from QAM, we can pass this to the QAMDEMOD function in MATLAB to return the recovered signal. However, this involves restoring the integer inputs to their original form, and removing the quantization performed earlier.
 
-Here we can see, we divide the integer data by 255, and then idenitfying the min and max values from this divsion and then finally shift by the minimum values to align with the original signal properly.
+We divide the integer data by 255, and then idenitfy the min and max values from this divsion and then finally shift by the minimum values to align with the original signal properly.
 ![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/CODE_SNIP.png)
 
 Following this recovery, we can verify the spectrum once more and write the recovered signal to a FLAC file for audio comparison:
@@ -66,7 +66,7 @@ Through out this project, there is the use of a custom FFT function which is bas
 For example, an N = 1,000,000 results in 1 Trillion calculations for the typical DFT, but only 20 million for the Cooley-Tukey FFT algorithm. This is several orders of magnitude apart, not even addressing the time to perform those calculations. The results from this function allow us to compute the magnitude frequency spectrum at various points to verify results and observe the results of modulation.
 
 ## Results Discussion
-As we've observed the frequency spectrum at different points we'll notice the effective modulation and demodulation of the 10 KHz carrier, and QAM. If looking at the alternative source code for this project you notice an attempt to introduce AWGN via a channel, however it had no effect on the recovered signal. There was a minor attenuation, but it was minimal. This suggests the robustness of QAM or MATLAB's QAMDEMOD function has built in filtering in clean up.
+As we've observed the frequency spectrum at different points we'll notice the effective modulation and demodulation of the 10 KHz carrier, and QAM. If looking at the alternative source code for this project you notice an attempt to introduce AWGN via a channel, however it had no effect on the recovered signal. There was a minor attenuation, but it was minimal. This suggests the robustness of QAM or MATLAB's QAMDEMOD function has built in filtering and clean up.
 
 Observing the constellation plot, we can see 255 symbols which indicates the quanitization was successful. This is further verified by the reconstruction of the signal when listening on speakers, they sound the same. Overall, QAM256 is an effective modulation/demodulation scheme that maintains the integrity of audio files, and exemplifies the continuation of AM despite its lower fidelity compared to other schemes.
 
