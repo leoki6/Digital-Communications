@@ -21,7 +21,7 @@ In this project, the purpose was to encode, modulate, and demodulate a FLAC file
 - MATLAB Documentation
 
 ## System Schematics
-![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/System_Diagrams/System_Diagram.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/System_Diagram/System_Diagram.png)
 
 ## System Analysis
 
@@ -42,11 +42,11 @@ To utilize the QAMMOD, we need to quantize the FLAC file for processing. For QAM
 It's important to notice that is an ideal constellation because there are no noisy conditions.
 
 Furthermore, we can also look at the spectrum from this modulation as shown below:
-![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/QAM_Spectrum.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/QAM_SPECTRUM.png)
 
 ### Carrier Modulation
 Moving forward, we can multiply the result of the QAM modulation by 100 KHz complex carrier. We can observe the new spectrum down below with a spike at the carrier frequency:
-![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/MOD_SPECTRUM.png)
+![image](https://github.com/leoki6/Digital-Communications/blob/main/Final_Project/Figures/MOD_Spectrum.png)
 
 ### Carrier Demodulation
 To demodulate carrier, it is as simple as multiplying by the complex carrier. This prepares the data to be processed in QAMDEMOD. 
