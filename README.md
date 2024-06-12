@@ -10,4 +10,4 @@ A collection of laboratory assignments and projects, alongside documentation, de
 - [LAB 5: BPSK, QPSK, & QAM](/L5_BPSK_QPSK_QAM)
 - [LAB 6: SNR & BER](/L6_SNR_BER)
 - [LAB 7: DSSS & PN Sequences](/L7_DSSS_PN_Sequences)
-- [Final Project: TBD](/Final_Project)
+- [Final Project: FLAC FILE TRANSMISSION USING QAM-256](/Final_Project)
